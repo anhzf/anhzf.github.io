@@ -17,7 +17,7 @@ const routes = [
   },
   {
     path: '/palestine-single-div',
-    component: () => import(/* webpackChunkName: "about" */ '../views/PalestineSingleDiv.vue')
+    component: () => import('../views/creation/PalestineSingleDiv/PalestineSingleDiv.vue')
   },
 ]
 

@@ -1,5 +1,7 @@
 <template>
   <main class="page">
+    <h1 class="title">Free Palestine 🔥</h1>
+
     <div class="palestine-flag__container">
       <div class="palestine-flag" />
     </div>
@@ -12,7 +14,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.page {
+  flex-direction: column-reverse;
+  justify-content: center;
+  row-gap: 1rem;
+}
+
 .palestine-flag {
   position: relative;
   width: 800px;
@@ -56,5 +64,10 @@ export default {
     0 27.7px 36.5px rgba(0, 0, 0, 0.097),
     0 76px 100px rgba(0, 0, 0, 0.14)
   ;
+}
+
+.title {
+  font-size: 3rem;
+  line-height: 2;
 }
 </style>
