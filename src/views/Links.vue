@@ -9,7 +9,7 @@
         <a :href="link.to ? $router.resolve(link.to).href : link.url" target="_blank" />
 
         <div class="link__item-content">
-          <img src="https://picsum.photos/300/300" alt="" class="link__item-thumbnail">
+          <img :src="link.imgSrc" alt="" class="link__item-thumbnail">
           <span class="link__item-title">{{ link.title }}</span>
         </div>
 
@@ -26,12 +26,19 @@
 <script>
 const linkData = [
   {
-    title: 'Google',
-    url: 'https://google.com',
+    title: 'How To Make Palestine Flag in Single <div/>',
+    to: '/palestine-single-div',
+    imgSrc: '/images/Optimized-palestine-single-div.png',
   },
   {
-    title: 'Palestine',
-    to: '/palestine-single-div',
+    title: 'My Github',
+    url: 'https://github.com/anhzf',
+    imgSrc: '/images/Optimized-github-profile.png',
+  },
+  {
+    title: 'My Instagram',
+    url: 'https://instagram.com/alwan.nuha',
+    imgSrc: '/images/Optimized-pp.jpg'
   },
 ]
 
@@ -39,7 +46,7 @@ export default {
   name: 'PageLinks',
   setup() {
     return {
-      links: linkData.concat(linkData, linkData, linkData),
+      links: linkData,
     }
   }
 }
