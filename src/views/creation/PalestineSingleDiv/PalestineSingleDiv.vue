@@ -1,21 +1,47 @@
 <template>
   <main class="page">
-    <h1 class="title">Free Palestine 🔥</h1>
+    <div class="demo">
+      <h1 class="title">Free Palestine 🔥</h1>
 
-    <div class="palestine-flag__container">
-      <div class="palestine-flag" />
+      <div class="palestine-flag__container">
+        <div class="palestine-flag" />
+      </div>
     </div>
+
+    <article v-html="article" />
   </main>
 </template>
 
 <script>
+import marked from 'marked'
+import highlight from 'highlight.js'
+import article from './article.md'
+
+marked.setOptions({
+  gfm: true,
+  breaks: true,
+  highlight(code, lang) {
+    const language = highlight.getLanguage(lang) ? lang : 'plaintext'
+
+    return highlight.highlight(code, {language}).value
+  },
+  langPrefix: 'hljs language-'
+})
+
 export default {
-  name: 'PalestineSingleDiv'
+  name: 'PalestineSingleDiv',
+  data() {
+    return {
+      article: marked(article),
+    }
+  },
 }
 </script>
 
 <style scoped>
-.page {
+.demo {
+  display: flex;
+  min-height: 100vh;
   flex-direction: column-reverse;
   justify-content: center;
   row-gap: 1rem;
@@ -69,5 +95,11 @@ export default {
 .title {
   font-size: 3rem;
   line-height: 2;
+}
+
+article {
+  width: 100%;
+  max-width: 65ch;
+  text-align: left;
 }
 </style>
