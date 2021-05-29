@@ -124,6 +124,7 @@ export default {
   transform: scaleY(0);
   transform-origin: bottom;
   transition: transform .14s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  will-change: transform;
 }
 
 .link__item:hover .link__item-overlay {
@@ -141,6 +142,7 @@ export default {
   justify-content: center;
   align-items: center;
   transition: background-color .14s ease-out;
+  will-change: background-color;
 }
 
 .link__open-btn:hover {
