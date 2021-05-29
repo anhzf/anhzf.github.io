@@ -40,10 +40,13 @@ export default {
 
 <style scoped>
 .demo {
+  overflow: auto;
   display: flex;
-  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
   flex-direction: column-reverse;
   justify-content: center;
+  align-items: center;
   row-gap: 1rem;
 }
 
