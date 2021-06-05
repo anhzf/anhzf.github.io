@@ -13,6 +13,12 @@
       "esnext",
       "dom"
     ],
+    "paths": {
+      "components/*": ["src/components/*"],
+      "pages/*": ["src/pages/*"],
+      "src/*": ["src/*"],
+      "@/*": ["*"]
+    },
     "plugins": [
       { "name": "@vuedx/typescript-plugin-vue" }
     ],

@@ -1,16 +1,11 @@
 <template>
-  <router-view />
+  <span>hello</span>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'App',
+  name: 'PageIndex',
 });
 </script>
-
-<style lang="sass">
-#app
-  @apply text-center
-</style>
