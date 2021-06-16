@@ -25,5 +25,14 @@ module.exports = {
   rules: {
     'import/no-unresolved': 'off',
     'import/no-extraneous-dependencies': 'off',
+    // ts
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+
+    'func-names': 'off',
+    'max-len': ['warn', {
+      code: 150,
+      // will ignore everything inside html attrs
+      ignorePattern: '[\\w-]+="([^"]*)"',
+    }],
   },
 };
