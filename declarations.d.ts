@@ -39,3 +39,59 @@ declare module 'markdown-it-highlightjs' {
 
   export default plugin;
 }
+
+declare module 'eva-icons' {
+  interface AnimationOptions {
+    type?: string;
+    hover?: boolean;
+    infinite?: boolean;
+  }
+
+  interface ReplaceOptions {
+    fill?: string;
+    width?: string | number;
+    height?: string | number;
+    class?: string;
+    animation?: AnimationOptions;
+  }
+
+  declare const replace: (options?: ReplaceOptions) => void;
+
+  export {
+    AnimationOptions,
+    ReplaceOptions,
+    replace,
+  };
+}
+
+declare module 'animejs/lib/anime.es' {
+  type Values = any;
+
+  interface AnimateOptions {
+    targets?: any;
+    translateX?: any;
+    translateY?: any;
+    translateZ?: any;
+    rotate?: any;
+    rotateX?: any;
+    rotateY?: any;
+    rotateZ?: any;
+    scale?: any;
+    scaleX?: any;
+    scaleY?: any;
+    scaleZ?: any;
+    skew?: any;
+    skewX?: any;
+    skewY?: any;
+    perspective?: any;
+    duration?: number;
+    easing?: string;
+    [k: string]: any;
+  }
+
+  declare const animate: (opts: AnimateOptions) => void;
+
+  export {
+    animate as default,
+  };
+}

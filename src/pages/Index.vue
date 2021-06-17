@@ -1,81 +1,147 @@
 <template>
-  <main class="flex flex-col items-center">
-    <header class="w-full h-screen p-4 flex flex-col sm:items-center">
-      <h1
-        ref="title"
-        class="w-min mt-[15vh] sm:mt-0 px-4 font-bold text-5xl sm:text-9xl text-blue-gray-900 transform"
-        :style="styleByScrollY((y) => ({
-          '--tw-translate-y': `${y * 1.4}px`,
-          willChange: 'transform',
-        }), toPx('100vh'))"
-      >
+  <MegaMenu />
+  <main class="relative z-10 flex flex-col items-center">
+    <section class="w-full h-[85vh] p-4 flex flex-col justify-center items-center gap-3">
+      <h1 class="font-black text-6xl text-center text-blue-gray-900">
         Anhzf.Dev
       </h1>
+      <span class="bg-light-blue-400/50 font-medium text-xl text-center text-white">
+        Fullstack Web Developer
+      </span>
+    </section>
 
-      <div class="absolute right-0 overflow-none">
-        <img
-          src="assets/img/anhzf_transparent.png"
-          alt="anhzf"
-          class="w-xs sm:w-max max-w-sm transform translate-x-1/2"
-          :style="styleByScrollY((y) => ({
-            '--tw-translate-y': `${y * -1.2}px`,
-            willChange: 'transform',
-          }))"
-        >
-      </div>
+    <div class="font-medium text-blue-gray-400 flex flex-col items-center gap-1 animate-bounce animate-duration-2000">
+      <span>featured projects</span>
+      <eva-icon
+        name="arrow-downward"
+        width="1.3rem"
+        height="1.3rem"
+      />
+    </div>
 
-      <button
-        class="justify-self-end mt-auto animate-bounce p-2 flex flex-col items-center gap-y-2"
-        :style="styleByScrollY((y) => ({ opacity: 1 - y * 0.005 }), 200)"
-      >
-        <span class="font-medium text-2xl text-blue-500">Featured projects</span>
-        <span class="material-icons-round text-4xl text-purple-500">
-          arrow_downward
-        </span>
+    <section class="h-[200vh] p-8 flex flex-col items-center gap-8">
+      <CardProject
+        title="Bersamabisa.ID Community"
+        img-src="/assets/img/projects/bbid.png"
+        :tech-stack="[
+          '/assets/icons/quasar.svg',
+          '/assets/icons/firebase.svg',
+          '/assets/icons/vue.svg',
+        ]"
+      />
+
+      <CardProject
+        title="KPBI Membership Management"
+        img-src="/assets/img/projects/kpbi.png"
+        :tech-stack="[
+          '/assets/icons/vue.svg',
+          '/assets/icons/laravel.svg',
+        ]"
+      />
+
+      <CardProject
+        title="Sebelas Maret International IoT Challenges 2021"
+        img-src="/assets/img/projects/iotchallenges.png"
+        :tech-stack="[
+          '/assets/icons/react.svg',
+        ]"
+      />
+
+      <CardProject
+        title="Komplain Apps"
+        img-src="/assets/img/projects/sipm.png"
+        :tech-stack="[
+          '/assets/icons/quasar.svg',
+          '/assets/icons/firebase.svg',
+          '/assets/icons/vue.svg',
+        ]"
+      />
+
+      <button class="font-medium text-blue-gray-400 flex items-center gap-1">
+        <span>More</span>
+        <eva-icon
+          name="arrow-forward-outline"
+          class="block"
+        />
       </button>
-    </header>
-    <!-- <section class="relative w-full max-w-screen-lg px-4 py-10 before:(content absolute -z-1 top-0 left-0 w-full h-full bg-blue-gray-100 rounded-xl) after:(content absolute -z-1 top-0 left-0 w-full h-full bg-gradient-2 rounded-xl shadow-lg transform -rotate-rotate-2)">
-      <h5>Hi, I'm Alwan!</h5>
-    </section> -->
-
-    <div class="h-[200vh]" />
+    </section>
   </main>
+
+  <div class="absolute top-0 left-0 w-full h-screen">
+    <div class="relative w-full h-full transform -translate-y-10">
+      <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-yellow-300/30 rounded-full filter blur-xl transform -translate-x-1/2 -translate-y-[80%]" />
+      <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-300/30 rounded-full filter blur-xl transform -translate-x-[80%] -translate-y-[20%]" />
+      <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-green-300/30 rounded-full filter blur-xl transform -translate-x-[20%] -translate-y-[20%]" />
+    </div>
+  </div>
+
+  <div
+    ref="cursorFollower"
+    class="pointer-events-none absolute z-50 top-0 left-0 w-20 h-20 bg-blue-300/30 border border-blue-500/20 rounded-full"
+  />
 </template>
 
 <script lang="ts">
 import {
-  computed,
-  CSSProperties,
-  defineComponent, ref,
+  defineComponent, reactive, ref, watch, onMounted,
 } from 'vue';
-import toPx from 'unit-to-px';
-import { useWindowScroll } from '@vueuse/core';
-
-// eslint-disable-next-line no-unused-vars
-type styleByScrollFactory = (y: number) => CSSProperties;
+import { useMouse } from '@vueuse/core';
+import anime from 'animejs/lib/anime.es';
+import CardProject from 'components/CardProject.vue';
+import MegaMenu from 'components/MegaMenu.vue';
 
 export default defineComponent({
   name: 'PageIndex',
+  components: {
+    CardProject,
+    MegaMenu,
+  },
   setup() {
-    const title = ref(null);
-    const { y } = useWindowScroll();
-    const styleByScrollY = computed(
-      () => (factory: styleByScrollFactory, offset: number | null = null) => {
-        console.log(y.value, offset);
+    const cursorFollower = ref<HTMLDivElement | null>(null);
+    const mouse = reactive(useMouse());
+    const cursorFollowerState = reactive({
+      scale: false,
+      click: false,
+    });
+    const transformFollower = () => {
+      if (cursorFollower.value && !cursorFollower.value.hidden) {
+        anime({
+          targets: cursorFollower.value,
+          translateX: `calc(-45% + ${mouse.x}px)`,
+          translateY: `calc(-40% + ${mouse.y}px)`,
+          // eslint-disable-next-line no-nested-ternary
+          scale: cursorFollowerState.click
+            ? '-=0.6'
+            : (cursorFollowerState.scale ? 1.6 : 1),
+          easing: 'easeOutQuart',
+          duration: 150,
+        });
+      }
+    };
 
-        if (typeof offset === 'number') {
-          // if scroll Y reaches the offset it will be stopped
-          return factory(y.value >= offset
-            ? offset : y.value);
+    watch(mouse, () => transformFollower(), { immediate: true });
+
+    onMounted(() => {
+      document.body.onmouseover = (e) => {
+        if (e.target && cursorFollower.value) {
+          const cursorType = window.getComputedStyle(e.target as HTMLElement).cursor;
+
+          cursorFollowerState.scale = cursorType === 'pointer';
+          transformFollower();
         }
-        return factory(y.value);
-      },
-    );
+      };
+      document.onmousedown = () => {
+        cursorFollowerState.click = true;
+        transformFollower();
+      };
+      document.onmouseup = () => {
+        cursorFollowerState.click = false;
+        transformFollower();
+      };
+    });
 
     return {
-      title,
-      styleByScrollY,
-      toPx,
+      cursorFollower,
     };
   },
 });
