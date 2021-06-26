@@ -26,13 +26,13 @@ export default defineConfig({
     Markdown({
       wrapperComponent: 'BlogLayout',
       wrapperClasses: 'prose',
+      headEnabled: true,
       markdownItOptions: {
         html: true,
         linkify: true,
       },
       markdownItSetup(md) {
-        md.use(MarkdownItPluginHighlightJs, {
-        });
+        md.use(MarkdownItPluginHighlightJs, {});
       },
     }),
     Pages({

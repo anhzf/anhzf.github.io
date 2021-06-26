@@ -1,9 +1,19 @@
+---
+title: Create Palestine Flag with Single <div />
+meta:
+  - name: description
+    content: "CSS Trick: Create Palestine Flag with Single <div />"
+---
+
 ## Working Demo
+
 <style>
 .palestine-flag {
+  --flag-width: 800px;
+  --flag-height: 500px;
   position: relative;
-  width: 800px;
-  height: 500px;
+  width: var(--flag-width);
+  height: var(--flag-height);
 }
 .palestine-flag::before {
   content: '';
@@ -11,11 +21,11 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(500px / 3);
+  height: calc(var(--flag-height) / 3);
   background-color: #000;
   box-shadow:
-    0 calc(500px / 3 * 1) #fff,
-    0 calc(500px / 3 * 2) #00763B
+    0 calc(var(--flag-height) / 3 * 1) #fff,
+    0 calc(var(--flag-height) / 3 * 2) #00763B
   ;
 }
 .palestine-flag::after {
@@ -25,9 +35,9 @@
   left: 0;
   width: 0;
   height: 0;
-  border-left: calc(500px / 2) solid #C81025;
-  border-top: calc(500px / 2) solid transparent;
-  border-bottom: calc(500px / 2) solid transparent;
+  border-left: calc(var(--flag-height) / 2) solid #C81025;
+  border-top: calc(var(--flag-height) / 2) solid transparent;
+  border-bottom: calc(var(--flag-height) / 2) solid transparent;
 }
 .palestine-flag__container {
   overflow: hidden;
@@ -47,6 +57,7 @@
   <div class="palestine-flag" />
 </div>
 
+---
 ## Code
 
 ### HTML

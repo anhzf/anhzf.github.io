@@ -1,4 +1,5 @@
-import { createApp } from 'vue';
+import { createSSRApp } from 'vue';
+import { createHead } from '@vueuse/head';
 import router from 'src/router';
 import App from 'src/App.vue';
 import EvaIcon from 'components/EvaIcon.vue';
@@ -8,11 +9,19 @@ import 'virtual:windi.css';
 import 'virtual:windi-devtools';
 import 'highlight.js/styles/stackoverflow-dark.css';
 
-const app = createApp(App);
+export const createApp = () => {
+  const app = createSSRApp(App);
+  const head = createHead();
 
-app.use(router);
+  app.use(router);
+  app.use(head);
 
-app.component('EvaIcon', EvaIcon);
-app.component('BlogLayout', BlogLayout);
+  app.component('EvaIcon', EvaIcon);
+  app.component('BlogLayout', BlogLayout);
 
-app.mount('#app');
+  return {
+    app, router,
+  };
+};
+
+createApp().app.mount('#app');
