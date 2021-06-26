@@ -24,6 +24,7 @@ module.exports = {
   ],
   rules: {
     'import/no-unresolved': 'off',
+    'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': 'off',
     // ts
     '@typescript-eslint/explicit-module-boundary-types': 'off',

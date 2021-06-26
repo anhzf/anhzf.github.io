@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed top-0 right-0 p-6">
+  <div class="fixed z-50 top-0 right-0 p-6">
     <button class="flex justify-center items-center">
       <eva-icon
         name="menu-2-outline"
