@@ -10,7 +10,7 @@ import EsLintPlugin from 'vite-plugin-eslint';
 import MarkdownItPluginHighlightJs from 'markdown-it-highlightjs';
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       components: path.resolve(__dirname, './src/components'),
@@ -49,12 +49,15 @@ export default defineConfig({
       // }
     }),
     WindiCSS(),
-    EsLintPlugin({
-      fix: true,
-      include: [
-        'src/**/*.ts',
-        'src/**/*.vue',
-      ],
-    }),
+    // just enable eslint on dev mode
+    mode !== 'production'
+      ? EsLintPlugin({
+        fix: true,
+        include: [
+          'src/**/*.ts',
+          'src/**/*.vue',
+        ],
+      })
+      : undefined,
   ],
-});
+}));

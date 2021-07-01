@@ -46,7 +46,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, PropType } from 'vue';
 
 export default defineComponent({
   name: 'CardProject',
@@ -64,7 +64,7 @@ export default defineComponent({
       default: 'https://via.placeholder.com/300',
     },
     techStack: {
-      type: Array,
+      type: Array as PropType<string[]>,
       default: () => [],
     },
   },
