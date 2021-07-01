@@ -28,7 +28,12 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     // ts
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-
+    // vue
+    'vue/component-name-in-template-casing': ['error', 'PascalCase', {
+      registeredComponentsOnly: true,
+      ignores: [],
+    }],
+    // js
     'func-names': 'off',
     'max-len': ['warn', {
       code: 150,
