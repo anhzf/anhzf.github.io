@@ -1,0 +1,1 @@
+import{o as t,c as d,b as o}from"./vendor.fd21ddf3.js";const e={},n=o("dt",null,[o("h1",{class:"font-bold text-9xl"}," 404 ")],-1),l=o("dd",null,"Uh oh! Your wanted page doesn't exists, maybe typo?",-1);e.render=function(o,e){return t(),d("div",null,[n,l])};export default e;
