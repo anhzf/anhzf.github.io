@@ -13,6 +13,7 @@
   },
   "conventionalCommits.scopes": [
     "ui",
-    "page"
+    "page",
+    "components"
   ]
 }

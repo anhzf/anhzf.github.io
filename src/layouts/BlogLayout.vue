@@ -11,14 +11,17 @@
       <slot />
     </article>
   </main>
+
+  <CursorFollower />
 </template>
 
 <script lang="ts">
-import MegaMenu from 'components/MegaMenu.vue';
 import { defineComponent } from 'vue';
+import CursorFollower from 'components/CursorFollower';
+import MegaMenu from 'components/MegaMenu.vue';
 
 export default defineComponent({
   name: 'LayoutBlog',
-  components: { MegaMenu },
+  components: { MegaMenu, CursorFollower },
 });
 </script>

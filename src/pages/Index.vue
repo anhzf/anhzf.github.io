@@ -1,12 +1,13 @@
 <template>
   <MegaMenu />
+
   <main class="relative z-10 flex flex-col items-center">
     <section class="w-full h-[85vh] p-4 flex flex-col justify-center items-center gap-3">
       <h1 class="font-black text-6xl text-center text-blue-gray-900">
         Anhzf.Dev
       </h1>
       <span class="bg-light-blue-400/50 font-medium text-xl text-center text-white">
-        Fullstack Web Developer
+        JAMStack Web Developer
       </span>
     </section>
 
@@ -75,74 +76,23 @@
     </div>
   </div>
 
-  <div
-    ref="cursorFollower"
-    class="pointer-events-none absolute z-50 top-0 left-0 w-20 h-20 bg-blue-300/30 border border-blue-500/20 rounded-full"
-  />
+  <CursorFollower />
 </template>
 
 <script lang="ts">
 import {
-  defineComponent, reactive, ref, watch, onMounted,
+  defineComponent,
 } from 'vue';
-import { useMouse } from '@vueuse/core';
-import anime from 'animejs/lib/anime.es';
 import CardProject from 'components/CardProject.vue';
 import MegaMenu from 'components/MegaMenu.vue';
+import CursorFollower from 'components/CursorFollower';
 
 export default defineComponent({
   name: 'PageIndex',
   components: {
     CardProject,
     MegaMenu,
-  },
-  setup() {
-    const cursorFollower = ref<HTMLDivElement | null>(null);
-    const mouse = reactive(useMouse());
-    const cursorFollowerState = reactive({
-      scale: false,
-      click: false,
-    });
-    const transformFollower = () => {
-      if (cursorFollower.value && !cursorFollower.value.hidden) {
-        anime({
-          targets: cursorFollower.value,
-          translateX: `calc(-45% + ${mouse.x}px)`,
-          translateY: `calc(-40% + ${mouse.y}px)`,
-          // eslint-disable-next-line no-nested-ternary
-          scale: cursorFollowerState.click
-            ? '-=0.6'
-            : (cursorFollowerState.scale ? 1.6 : 1),
-          easing: 'easeOutQuart',
-          duration: 150,
-        });
-      }
-    };
-
-    watch(mouse, () => transformFollower(), { immediate: true });
-
-    onMounted(() => {
-      document.body.onmouseover = (e) => {
-        if (e.target && cursorFollower.value) {
-          const cursorType = window.getComputedStyle(e.target as HTMLElement).cursor;
-
-          cursorFollowerState.scale = cursorType === 'pointer';
-          transformFollower();
-        }
-      };
-      document.onmousedown = () => {
-        cursorFollowerState.click = true;
-        transformFollower();
-      };
-      document.onmouseup = () => {
-        cursorFollowerState.click = false;
-        transformFollower();
-      };
-    });
-
-    return {
-      cursorFollower,
-    };
+    CursorFollower,
   },
 });
 </script>
