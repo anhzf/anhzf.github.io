@@ -15,5 +15,6 @@
     "ui",
     "page",
     "components"
-  ]
+  ],
+  "liveServer.settings.root": "/dist"
 }

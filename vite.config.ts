@@ -60,4 +60,8 @@ export default defineConfig(({ mode }) => ({
       })
       : undefined,
   ],
+  ssgOptions: {
+    script: 'async',
+    formatting: 'minify',
+  },
 }));

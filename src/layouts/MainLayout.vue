@@ -21,7 +21,9 @@ export default defineComponent({
   name: 'MainLayout',
   components: { CursorFollower, MegaMenu },
   setup() {
-    const isMobile = /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const isMobile = import.meta.env.SSG
+      ? /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+      : true;
 
     return {
       isMobile,
