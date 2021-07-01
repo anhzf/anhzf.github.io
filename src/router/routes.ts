@@ -3,9 +3,14 @@ import generatedRoutes from 'virtual:generated-pages';
 
 const routes: RouteRecordRaw[] = [
   {
-    path: '',
+    path: '/',
     name: 'Index',
     component: () => import('pages/Index.vue'),
+  },
+  {
+    path: '/links',
+    name: 'Links',
+    component: () => import('pages/Links.vue'),
   },
   ...generatedRoutes,
   {

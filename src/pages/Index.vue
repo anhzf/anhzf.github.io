@@ -21,40 +21,9 @@
 
       <section class="h-[200vh] p-8 flex flex-col items-center gap-8">
         <CardProject
-          title="Bersamabisa.ID Community"
-          img-src="/assets/img/projects/bbid.png"
-          :tech-stack="[
-            '/assets/icons/quasar.svg',
-            '/assets/icons/firebase.svg',
-            '/assets/icons/vue.svg',
-          ]"
-        />
-
-        <CardProject
-          title="KPBI Membership Management"
-          img-src="/assets/img/projects/kpbi.png"
-          :tech-stack="[
-            '/assets/icons/vue.svg',
-            '/assets/icons/laravel.svg',
-          ]"
-        />
-
-        <CardProject
-          title="Sebelas Maret International IoT Challenges 2021"
-          img-src="/assets/img/projects/iotchallenges.png"
-          :tech-stack="[
-            '/assets/icons/react.svg',
-          ]"
-        />
-
-        <CardProject
-          title="Komplain Apps"
-          img-src="/assets/img/projects/sipm.png"
-          :tech-stack="[
-            '/assets/icons/quasar.svg',
-            '/assets/icons/firebase.svg',
-            '/assets/icons/vue.svg',
-          ]"
+          v-for="project in projects"
+          :key="project.title"
+          v-bind="project"
         />
 
         <button class="font-medium text-blue-gray-400 flex items-center gap-1">
@@ -79,11 +48,17 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { projects } from '@/content-data';
 import CardProject from 'components/CardProject.vue';
 import MainLayout from 'src/layouts/MainLayout.vue';
 
 export default defineComponent({
   name: 'PageIndex',
   components: { MainLayout, CardProject },
+  setup() {
+    return {
+      projects,
+    };
+  },
 });
 </script>

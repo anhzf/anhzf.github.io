@@ -2,7 +2,7 @@
   <article class="m-2 w-full max-w-xs bg-white rounded-2xl shadow shadow-blue-700 transition-shadow hover:(shadow-xl shadow-blue-700)">
     <div class="overflow-hidden h-44 rounded-t-[inherit]">
       <img
-        :src="imgSrc"
+        :src="thumbnailSrc"
         :alt="title"
         class="object-cover w-full h-full"
       >
@@ -59,9 +59,9 @@ export default defineComponent({
       type: String,
       default: '#',
     },
-    imgSrc: {
+    thumbnailSrc: {
       type: String,
-      default: 'https://via.placeholder.com/300.jpg',
+      default: 'https://via.placeholder.com/300',
     },
     techStack: {
       type: Array,
