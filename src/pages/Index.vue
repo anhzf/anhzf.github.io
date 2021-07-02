@@ -1,6 +1,6 @@
 <template>
   <MainLayout>
-    <main class="relative z-10 flex flex-col items-center">
+    <main class="relative flex flex-col items-center">
       <header class="w-full h-[85vh] p-4 flex flex-col justify-center items-center gap-3">
         <h1 class="font-black text-6xl text-center text-blue-gray-900">
           Anhzf.Dev
@@ -35,14 +35,6 @@
         </button>
       </section>
     </main>
-
-    <div class="absolute top-0 left-0 w-full h-screen">
-      <div class="relative w-full h-full transform -translate-y-10">
-        <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-yellow-300/30 rounded-full filter blur-xl transform -translate-x-1/2 -translate-y-[80%]" />
-        <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-300/30 rounded-full filter blur-xl transform -translate-x-[80%] -translate-y-[20%]" />
-        <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-green-300/30 rounded-full filter blur-xl transform -translate-x-[20%] -translate-y-[20%]" />
-      </div>
-    </div>
   </MainLayout>
 </template>
 
