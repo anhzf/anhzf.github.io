@@ -1,140 +1,142 @@
 {
   "vite/preload-helper": [],
   "/@vite-plugin-pages/generated-pages": [],
-  "D:/Repositories/4fun-creation/src/router/routes.ts": [],
-  "D:/Repositories/4fun-creation/src/App.vue?vue&type=script&lang.ts": [],
-  "D:/Repositories/4fun-creation/src/App.vue?vue&type=style&index=0&lang.sass": [],
-  "D:/Repositories/4fun-creation/src/App.vue": [],
-  "D:/Repositories/4fun-creation/src/components/EvaIcon.vue?vue&type=script&lang.ts": [],
-  "D:/Repositories/4fun-creation/src/components/EvaIcon.vue": [],
-  "D:/Repositories/4fun-creation/src/components/MegaMenu.vue?vue&type=script&lang.ts": [],
-  "D:/Repositories/4fun-creation/src/components/MegaMenu.vue": [],
-  "D:/Repositories/4fun-creation/src/components/CursorFollower.ts": [],
-  "D:/Repositories/4fun-creation/src/layouts/MainLayout.vue?vue&type=script&lang.ts": [],
-  "D:/Repositories/4fun-creation/src/layouts/MainLayout.vue": [],
-  "D:/Repositories/4fun-creation/src/layouts/BlogLayout.vue?vue&type=script&lang.ts": [],
-  "D:/Repositories/4fun-creation/src/layouts/BlogLayout.vue": [],
+  "D:/Repositories/anhzf.github.io/src/router/routes.ts": [],
+  "D:/Repositories/anhzf.github.io/src/App.vue?vue&type=script&lang.ts": [],
+  "D:/Repositories/anhzf.github.io/src/App.vue?vue&type=style&index=0&lang.sass": [],
+  "D:/Repositories/anhzf.github.io/src/App.vue": [],
+  "D:/Repositories/anhzf.github.io/src/components/EvaIcon.vue?vue&type=script&lang.ts": [],
+  "D:/Repositories/anhzf.github.io/src/components/EvaIcon.vue": [],
+  "D:/Repositories/anhzf.github.io/src/components/MegaMenu.vue?vue&type=script&lang.ts": [],
+  "D:/Repositories/anhzf.github.io/src/components/MegaMenu.vue": [],
+  "D:/Repositories/anhzf.github.io/src/components/CursorFollower.ts": [],
+  "D:/Repositories/anhzf.github.io/src/components/Blob.vue?vue&type=script&lang.ts": [],
+  "D:/Repositories/anhzf.github.io/src/components/Blob.vue": [],
+  "D:/Repositories/anhzf.github.io/src/layouts/MainLayout.vue?vue&type=script&lang.ts": [],
+  "D:/Repositories/anhzf.github.io/src/layouts/MainLayout.vue": [],
+  "D:/Repositories/anhzf.github.io/src/layouts/BlogLayout.vue?vue&type=script&lang.ts": [],
+  "D:/Repositories/anhzf.github.io/src/layouts/BlogLayout.vue": [],
   "/@windicss/windi.css": [],
-  "D:/Repositories/4fun-creation/node_modules/highlight.js/styles/stackoverflow-dark.css": [],
-  "D:/Repositories/4fun-creation/src/main.ts": [],
-  "D:/Repositories/4fun-creation/index.html": [],
-  "D:/Repositories/4fun-creation/node_modules/@vue/shared/dist/shared.esm-bundler.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/highlight.js/styles/stackoverflow-dark.css": [],
+  "D:/Repositories/anhzf.github.io/src/main.ts": [],
+  "D:/Repositories/anhzf.github.io/index.html": [],
+  "D:/Repositories/anhzf.github.io/node_modules/@vue/shared/dist/shared.esm-bundler.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/vue/dist/vue.runtime.esm-bundler.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/vue/dist/vue.runtime.esm-bundler.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/vite-ssg/dist/chunk-6HTX7RH6.mjs": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/vite-ssg/dist/chunk-6HTX7RH6.mjs": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/vite-ssg/dist/chunk-KHXGTJBV.mjs": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/vite-ssg/dist/chunk-KHXGTJBV.mjs": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/@vue/devtools-api/lib/esm/env.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/@vue/devtools-api/lib/esm/env.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/@vue/devtools-api/lib/esm/const.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/@vue/devtools-api/lib/esm/const.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/@vue/devtools-api/lib/esm/api/api.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/@vue/devtools-api/lib/esm/api/api.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/@vue/devtools-api/lib/esm/api/app.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/@vue/devtools-api/lib/esm/api/app.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/@vue/devtools-api/lib/esm/api/component.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/@vue/devtools-api/lib/esm/api/component.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/@vue/devtools-api/lib/esm/api/context.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/@vue/devtools-api/lib/esm/api/context.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/@vue/devtools-api/lib/esm/api/hooks.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/@vue/devtools-api/lib/esm/api/hooks.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/@vue/devtools-api/lib/esm/api/util.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/@vue/devtools-api/lib/esm/api/util.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/@vue/devtools-api/lib/esm/api/index.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/@vue/devtools-api/lib/esm/api/index.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/@vue/devtools-api/lib/esm/index.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/@vue/devtools-api/lib/esm/index.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/vue-router/dist/vue-router.esm-bundler.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/vue-router/dist/vue-router.esm-bundler.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/@vueuse/head/dist/index.mjs": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/@vueuse/head/dist/index.mjs": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/vite-ssg/dist/index.mjs": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/vite-ssg/dist/index.mjs": [
+    "/assets/vendor.79aef8b6.js"
   ],
   "\u0000commonjsHelpers.js": [
-    "/assets/vendor.fd21ddf3.js"
+    "/assets/vendor.79aef8b6.js"
   ],
-  "\u0000D:/Repositories/4fun-creation/node_modules/eva-icons/eva.js?commonjs-module": [
-    "/assets/vendor.fd21ddf3.js"
+  "\u0000D:/Repositories/anhzf.github.io/node_modules/eva-icons/eva.js?commonjs-module": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/eva-icons/eva.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/eva-icons/eva.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/vue-demi/lib/index.esm.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/vue-demi/lib/index.esm.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/@vueuse/shared/dist/index.esm.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/@vueuse/shared/dist/index.esm.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/@vueuse/core/dist/index.esm.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/@vueuse/core/dist/index.esm.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/node_modules/animejs/lib/anime.es.js": [
-    "/assets/vendor.fd21ddf3.js"
+  "D:/Repositories/anhzf.github.io/node_modules/animejs/lib/anime.es.js": [
+    "/assets/vendor.79aef8b6.js"
   ],
-  "D:/Repositories/4fun-creation/src/components/CardProject.vue?vue&type=script&lang.ts": [
-    "/assets/Index.c963d91d.js"
+  "D:/Repositories/anhzf.github.io/src/components/CardProject.vue?vue&type=script&lang.ts": [
+    "/assets/Index.ee06703d.js"
   ],
-  "D:/Repositories/4fun-creation/src/components/CardProject.vue": [
-    "/assets/Index.c963d91d.js"
+  "D:/Repositories/anhzf.github.io/src/components/CardProject.vue": [
+    "/assets/Index.ee06703d.js"
   ],
-  "D:/Repositories/4fun-creation/src/pages/Index.vue?vue&type=script&lang.ts": [
-    "/assets/Index.c963d91d.js"
+  "D:/Repositories/anhzf.github.io/src/pages/Index.vue?vue&type=script&lang.ts": [
+    "/assets/Index.ee06703d.js"
   ],
-  "D:/Repositories/4fun-creation/src/pages/Index.vue": [
-    "/assets/Index.c963d91d.js"
+  "D:/Repositories/anhzf.github.io/src/pages/Index.vue": [
+    "/assets/Index.ee06703d.js"
   ],
-  "D:/Repositories/4fun-creation/content-data.ts": [
+  "D:/Repositories/anhzf.github.io/content-data.ts": [
     "/assets/content-data.8550e269.js"
   ],
-  "D:/Repositories/4fun-creation/src/components/CardLink.vue?vue&type=script&lang.ts": [
-    "/assets/Links.3766e54c.js"
+  "D:/Repositories/anhzf.github.io/src/components/CardLink.vue?vue&type=script&lang.ts": [
+    "/assets/Links.6c99ded4.js"
   ],
-  "D:/Repositories/4fun-creation/src/components/CardLink.vue": [
-    "/assets/Links.3766e54c.js"
+  "D:/Repositories/anhzf.github.io/src/components/CardLink.vue": [
+    "/assets/Links.6c99ded4.js"
   ],
-  "D:/Repositories/4fun-creation/src/pages/Links.vue?vue&type=script&lang.ts": [
-    "/assets/Links.3766e54c.js"
+  "D:/Repositories/anhzf.github.io/src/pages/Links.vue?vue&type=script&lang.ts": [
+    "/assets/Links.6c99ded4.js"
   ],
-  "D:/Repositories/4fun-creation/src/pages/Links.vue": [
-    "/assets/Links.3766e54c.js"
+  "D:/Repositories/anhzf.github.io/src/pages/Links.vue": [
+    "/assets/Links.6c99ded4.js"
   ],
-  "D:/Repositories/4fun-creation/src/pages/Error404.vue": [
-    "/assets/Error404.905231fb.js"
+  "D:/Repositories/anhzf.github.io/src/pages/Error404.vue": [
+    "/assets/Error404.881f37af.js"
   ],
-  "D:/Repositories/4fun-creation/src/pages/blogs/palestine-single-div.md?vue&type=style&index=0&lang.css": [
-    "/assets/palestine-single-div.fd16a098.js",
+  "D:/Repositories/anhzf.github.io/src/pages/blogs/palestine-single-div.md?vue&type=style&index=0&lang.css": [
+    "/assets/palestine-single-div.be5e2781.js",
     "/assets/palestine-single-div.58bdb7ba.css"
   ],
-  "D:/Repositories/4fun-creation/src/pages/blogs/palestine-single-div.md": [
-    "/assets/palestine-single-div.fd16a098.js",
+  "D:/Repositories/anhzf.github.io/src/pages/blogs/palestine-single-div.md": [
+    "/assets/palestine-single-div.be5e2781.js",
     "/assets/palestine-single-div.58bdb7ba.css"
   ]
 }
