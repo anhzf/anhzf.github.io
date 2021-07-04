@@ -1,8 +1,8 @@
 import { ViteSSG } from 'vite-ssg';
 import routes from 'src/router/routes';
 import App from 'src/App.vue';
+import BlogLayout from 'src/layouts/BlogLayout.vue';
 import EvaIcon from 'components/EvaIcon.vue';
-import BlogLayout from './layouts/BlogLayout.vue';
 // eslint-disable-next-line import/no-unresolved
 import 'virtual:windi.css';
 import 'virtual:windi-devtools';
