@@ -29,6 +29,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { useHead } from '@vueuse/head';
 import { links } from '@/content-data';
 import MainLayout from 'src/layouts/MainLayout.vue';
 import CardLink from 'components/CardLink.vue';
@@ -37,6 +38,10 @@ export default defineComponent({
   name: 'PageLinks',
   components: { MainLayout, CardLink },
   setup() {
+    useHead({
+      title: 'Links - Anhzf.Dev',
+    });
+
     return {
       links,
     };

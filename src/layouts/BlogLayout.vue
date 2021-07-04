@@ -12,19 +12,10 @@
       </article>
     </main>
   </MainLayout>
-
-  <teleport to="body">
-    <amp-auto-ads
-      v-pre
-      type="adsense"
-      data-ad-client="ca-pub-9429563065756061"
-    />
-  </teleport>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { useHead } from '@vueuse/head';
 import MainLayout from 'src/layouts/MainLayout.vue';
 
 interface frontmatterAttrs {
@@ -35,17 +26,6 @@ interface frontmatterAttrs {
 export default defineComponent({
   name: 'LayoutBlog',
   components: { MainLayout },
-  setup() {
-    useHead({
-      script: [
-        {
-          async: true,
-          src: 'https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js',
-          'custom-element': 'amp-auto-ads',
-        },
-      ],
-    });
-  },
   computed: {
     frontmatter() {
       return this.$attrs.frontmatter as frontmatterAttrs;
