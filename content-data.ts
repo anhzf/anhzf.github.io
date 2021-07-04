@@ -3,6 +3,7 @@ import type { Component } from 'src/models';
 export const projects: Component.CardProject.Props[] = [
   {
     title: 'Bersamabisa.ID Community',
+    url: 'https://bersamabisa.id/',
     thumbnailSrc: '/assets/img/projects/bbid.png',
     techStack: [
       '/assets/icons/quasar.svg',
@@ -12,6 +13,7 @@ export const projects: Component.CardProject.Props[] = [
   },
   {
     title: 'KPBI Membership Management',
+    url: 'https://anggota.kpbi.or.id/',
     thumbnailSrc: '/assets/img/projects/kpbi.png',
     techStack: [
       '/assets/icons/vue.svg',
@@ -20,6 +22,7 @@ export const projects: Component.CardProject.Props[] = [
   },
   {
     title: 'Sebelas Maret International IoT Challenges 2021',
+    url: 'https://iotchallenges.ft.uns.ac.id/',
     thumbnailSrc: '/assets/img/projects/iotchallenges.png',
     techStack: [
       '/assets/icons/react.svg',
@@ -27,6 +30,7 @@ export const projects: Component.CardProject.Props[] = [
   },
   {
     title: 'Komplain Apps',
+    url: 'https://oprec-upt-tik.web.app/',
     thumbnailSrc: '/assets/img/projects/sipm.png',
     techStack: [
       '/assets/icons/quasar.svg',
