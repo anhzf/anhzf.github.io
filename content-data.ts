@@ -28,23 +28,33 @@ export const projects: Component.CardProject.Props[] = [
       '/assets/icons/react.svg',
     ],
   },
-  {
-    title: 'Komplain Apps',
-    url: 'https://oprec-upt-tik.web.app/',
-    thumbnailSrc: '/assets/img/projects/sipm.png',
-    techStack: [
-      '/assets/icons/quasar.svg',
-      '/assets/icons/firebase.svg',
-      '/assets/icons/vue.svg',
-    ],
-  },
+  // {
+  //   title: 'Komplain Apps',
+  //   url: 'https://oprec-upt-tik.web.app/',
+  //   thumbnailSrc: '/assets/img/projects/sipm.png',
+  //   techStack: [
+  //     '/assets/icons/quasar.svg',
+  //     '/assets/icons/firebase.svg',
+  //     '/assets/icons/vue.svg',
+  //   ],
+  // },
 ];
 
 export const links: Component.CardLink.Props[] = [
   {
+    label: 'Windows 11: Ulasan Saya Setelah Menggunakan 2 Pekan Sebagai Pengguna Windows 10',
+    url: 'https://anhzf.medium.com/c56753e8fe4d',
+    thumbnailSrc: 'https://miro.medium.com/max/1200/1*FBDnInXxeeGzzA6jQlOjcA.png',
+  },
+  {
     label: 'How to create Palestine Flag in Single <div />',
     url: '/blogs/palestine-single-div',
     thumbnailSrc: '/assets/img/links/Optimized-palestine-single-div.png',
+  },
+  {
+    label: 'Github',
+    url: 'https://github.com/anhzf',
+    thumbnailSrc: 'https://github.githubassets.com/pinned-octocat.svg',
   },
   {
     label: 'Instagram',
@@ -52,8 +62,8 @@ export const links: Component.CardLink.Props[] = [
     thumbnailSrc: 'https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png',
   },
   {
-    label: 'Github',
-    url: 'https://github.com/anhzf',
-    thumbnailSrc: 'https://github.githubassets.com/pinned-octocat.svg',
+    label: 'Medium Blogs',
+    url: 'https://anhzf.medium.com/',
+    thumbnailSrc: 'https://miro.medium.com/fit/c/164/164/1*vReTE3fNqmaW91z7sma4nQ.png',
   },
 ];

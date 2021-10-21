@@ -14,7 +14,8 @@
   "conventionalCommits.scopes": [
     "ui",
     "page",
-    "components"
+    "components",
+    "content"
   ],
   "liveServer.settings.root": "/dist"
 }
