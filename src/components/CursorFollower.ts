@@ -52,7 +52,7 @@ const CursorFollower = defineComponent({
     });
 
     return () => h('div', {
-      class: 'pointer-events-none opacity-0 absolute z-50 top-0 left-0 w-20 h-20 bg-blue-300/30 border border-blue-500/20 rounded-full',
+      class: 'pointer-events-none opacity-0 absolute z-49 top-0 left-0 w-20 h-20 bg-blue-300/30 border border-blue-500/20 rounded-full',
     });
   },
 });

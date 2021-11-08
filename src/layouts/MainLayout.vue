@@ -3,7 +3,9 @@
     <MegaMenu />
   </nav>
 
-  <slot />
+  <slot>
+    <router-view />
+  </slot>
 
   <ClientOnly>
     <Blob />

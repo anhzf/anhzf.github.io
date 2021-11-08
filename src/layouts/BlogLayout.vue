@@ -17,6 +17,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import MainLayout from 'src/layouts/MainLayout.vue';
+import 'highlight.js/styles/stackoverflow-dark.css';
 
 interface frontmatterAttrs {
   title: string;
