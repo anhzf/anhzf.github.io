@@ -1,4 +1,5 @@
 # Vue 3 + Typescript + Vite
+![github pages deployment workflow](https://github.com/anhzf/anhzf.github.io/actions/workflows/update-gh-pages.yml/badge.svg)
 
 This template should help get you started developing with Vue 3 and Typescript in Vite.
 
