@@ -35,7 +35,7 @@
         <span>More</span>
         <eva-icon
           name="arrow-forward-outline"
-          class="block group-hover:translate-x-4"
+          class="block transform group-hover:translate-x-1.5 transition-transform"
         />
       </button>
     </section>
