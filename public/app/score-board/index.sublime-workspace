@@ -1,0 +1,816 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mar",
+				"margin-top\tproperty"
+			],
+			[
+				"a",
+				"auto\toverflow-y"
+			],
+			[
+				"margin",
+				"margin-top\tproperty"
+			],
+			[
+				"over",
+				"overflow-y\tproperty"
+			],
+			[
+				"trans",
+				"transition\tproperty"
+			],
+			[
+				"padd",
+				"padding\tproperty"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			],
+			[
+				"te",
+				"text-decoration\tproperty"
+			],
+			[
+				"tra",
+				"transform\tproperty"
+			],
+			[
+				"tran",
+				"transform\tproperty"
+			],
+			[
+				"al",
+				"align-items\tproperty"
+			],
+			[
+				"box",
+				"box-shadow\tproperty"
+			],
+			[
+				"rgb",
+				"rgb()\tbackground-color"
+			],
+			[
+				"backc",
+				"background-color\tproperty"
+			],
+			[
+				"max",
+				"max-width\tproperty"
+			],
+			[
+				"table-c",
+				"table-column\tdisplay"
+			],
+			[
+				"marg",
+				"margin-top\tproperty"
+			],
+			[
+				"e",
+				"explode2"
+			],
+			[
+				"backgrc",
+				"background-color\tproperty"
+			],
+			[
+				"backgr",
+				"background-image\tproperty"
+			],
+			[
+				"border",
+				"border-color\tproperty"
+			],
+			[
+				"bo",
+				"border-radius\tproperty"
+			],
+			[
+				"font",
+				"font-size\tproperty"
+			],
+			[
+				"rota",
+				"rotateX()\ttransform"
+			],
+			[
+				"transfor",
+				"transform-origin\tproperty"
+			],
+			[
+				"ro",
+				"rotateX()\ttransform"
+			],
+			[
+				"anim",
+				"animation-duration\tproperty"
+			],
+			[
+				"anima",
+				"animation-delay\tproperty"
+			],
+			[
+				"ease",
+				"ease-out\ttransition-timing-function"
+			],
+			[
+				"pa",
+				"padding-right\tproperty"
+			],
+			[
+				"fon",
+				"font-size\tproperty"
+			],
+			[
+				"transform",
+				"transform\tproperty"
+			],
+			[
+				"ove",
+				"overflow-y\tproperty"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"overf",
+				"overflow-x\tproperty"
+			],
+			[
+				"c",
+				"controls"
+			],
+			[
+				"ba",
+				"background-color\tproperty"
+			],
+			[
+				"bac",
+				"background-color\tproperty"
+			],
+			[
+				"sca",
+				"scaleY"
+			],
+			[
+				"ani",
+				"animation-duration\tproperty"
+			],
+			[
+				"an",
+				"animation-delay\tproperty"
+			],
+			[
+				"tr",
+				"translateY()\ttransform"
+			],
+			[
+				"ano",
+				"animation-duration\tproperty"
+			],
+			[
+				"anime",
+				"animation-name\tproperty"
+			],
+			[
+				"h",
+				"hidden\toverflow-y"
+			],
+			[
+				"scale",
+				"scaleX()\ttransform"
+			],
+			[
+				"padding",
+				"padding-top\tproperty"
+			],
+			[
+				"st",
+				"sticky\tposition"
+			],
+			[
+				"create",
+				"createElement"
+			],
+			[
+				"in",
+				"innerHTML"
+			],
+			[
+				"s",
+				"span\tTag"
+			],
+			[
+				"on",
+				"onclick"
+			],
+			[
+				"start",
+				"startHere"
+			],
+			[
+				"red",
+				"redScore"
+			],
+			[
+				"blu",
+				"blueScore"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"Bl",
+				"BlueInc"
+			],
+			[
+				"B",
+				"BlueInc"
+			],
+			[
+				"re",
+				"RedInc"
+			],
+			[
+				"bl",
+				"blueScore"
+			],
+			[
+				"onk",
+				"onkeyup\tAttr"
+			],
+			[
+				"r",
+				"right\tproperty"
+			],
+			[
+				"p",
+				"padding\tproperty"
+			],
+			[
+				"fo",
+				"font-size\tproperty"
+			],
+			[
+				"pad",
+				"padding\tproperty"
+			],
+			[
+				"min",
+				"min-height\tproperty"
+			],
+			[
+				"add",
+				"addDictionary"
+			],
+			[
+				"modal",
+				"modal-footer"
+			],
+			[
+				"syno",
+				"synonim"
+			],
+			[
+				"syn",
+				"syno_query"
+			],
+			[
+				"sy",
+				"synonim"
+			],
+			[
+				"con",
+				"conn"
+			],
+			[
+				"word",
+				"word_id"
+			],
+			[
+				"wor",
+				"word_id"
+			],
+			[
+				"en",
+				"en_word"
+			],
+			[
+				"op",
+				"option\tTag"
+			],
+			[
+				"array_key",
+				"array_key_exists"
+			],
+			[
+				"Epic",
+				"Epiclyject"
+			],
+			[
+				"text",
+				"textInput"
+			],
+			[
+				"for",
+				"form\tTag"
+			],
+			[
+				"font-s",
+				"font-style\tproperty"
+			],
+			[
+				"bor",
+				"border\tproperty"
+			],
+			[
+				"moda",
+				"modal-content"
+			],
+			[
+				"fil",
+				"filter\tproperty"
+			],
+			[
+				"cl",
+				"class"
+			],
+			[
+				"ma",
+				"margin-right\tproperty"
+			],
+			[
+				"scr",
+				"scroll"
+			],
+			[
+				"co",
+				"content"
+			],
+			[
+				"sc",
+				"scrollTop"
+			],
+			[
+				"scroll",
+				"scrollTop"
+			],
+			[
+				"align",
+				"align-self\tproperty"
+			],
+			[
+				"inli",
+				"inline-block\tdisplay"
+			],
+			[
+				"li",
+				"link\tTag"
+			],
+			[
+				"log",
+				"login-nav"
+			],
+			[
+				"po",
+				"pointer"
+			],
+			[
+				"f",
+				"fun\tFunction"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"db",
+				"db"
+			],
+			[
+				"ex",
+				"exit"
+			],
+			[
+				"i",
+				"img\tTag"
+			],
+			[
+				"background",
+				"background-color\tproperty"
+			],
+			[
+				"backl",
+				"background-color\tproperty"
+			],
+			[
+				"eva",
+				"evaluasi_submit"
+			],
+			[
+				"ac",
+				"action\tAttr"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"fun",
+				"fun\tFunction"
+			],
+			[
+				"tex",
+				"text-align\tproperty"
+			],
+			[
+				"borde",
+				"border-style\tproperty"
+			],
+			[
+				"na",
+				"nama"
+			],
+			[
+				"akha",
+				"akhacc_data"
+			],
+			[
+				"sum",
+				"sumnotvoteguru"
+			],
+			[
+				"gur",
+				"guru_data"
+			],
+			[
+				"gu",
+				"guru_data"
+			],
+			[
+				"guru",
+				"guru_query"
+			],
+			[
+				"acc",
+				"accountsr"
+			],
+			[
+				"candi",
+				"candidateres"
+			],
+			[
+				"clo",
+				"close-vote-result"
+			],
+			[
+				"vote",
+				"vote-result-btn"
+			],
+			[
+				"be",
+				"belum-pilih"
+			],
+			[
+				"per",
+				"percentage"
+			],
+			[
+				"candid",
+				"candidatearr"
+			],
+			[
+				"array_fill",
+				"array_fill_keys"
+			],
+			[
+				"array_fi",
+				"array_fill_keys"
+			],
+			[
+				"array_mer",
+				"array_merge"
+			],
+			[
+				"CS",
+				"CSdata"
+			],
+			[
+				"ikh",
+				"ikhacc_data"
+			],
+			[
+				"mysqli",
+				"mysqli_num_rows"
+			],
+			[
+				"canda",
+				"candidate"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/xampp/htdocs/Epiclygend/Color-Pallete.html",
+		"/C/xampp/htdocs/Epiclygend/Score-Board/index.html",
+		"/C/xampp/htdocs/Epiclygend/Score-Board/css/score-board.css",
+		"/C/xampp/htdocs/Epiclygend/CSS/css.css",
+		"/C/xampp/htdocs/Epiclygend/CSS/index.css",
+		"/C/xampp/htdocs/Epiclygend/index.html",
+		"/C/xampp/htdocs/Epiclygend/Epiclyject/index.php",
+		"/C/xampp/htdocs/Epiclygend/Score-Board/css.css",
+		"/C/xampp/htdocs/Epiclygend/Credits/CSS/credits.css",
+		"/C/xampp/htdocs/Epiclygend/Credits/index.html",
+		"/C/xampp/htdocs/Epiclygend/Our-CSS/index.html",
+		"/C/xampp/htdocs/Epiclyject/css.css",
+		"/C/xampp/htdocs/Epiclyject/index.html",
+		"/C/xampp/htdocs/Epiclyject/credits.css",
+		"/C/xampp/htdocs/Epiclyject/Epiclygend.html",
+		"/C/xampp/htdocs/Epiclyject/index.php",
+		"/C/xampp/htdocs/Epiclyject/js/Timer.js",
+		"/C/xampp/htdocs/Epiclyject/dictionary.php",
+		"/C/xampp/htdocs/Epiclyject/Score_Counter.php",
+		"/C/xampp/htdocs/Epiclyject/Score Counter/Score_Counter.html",
+		"/I/Alwan Nuha/Project/Win7 Driver/basic-keyboard-game/js/index.js",
+		"/I/Alwan Nuha/Project/Win7 Driver/basic-keyboard-game/index.html",
+		"/C/xampp/htdocs/NHV/MATERIALIZE/materialize.css",
+		"/I/Alwan Nuha/Project/Win7 Driver/basic-keyboard-game/css/style.css",
+		"/I/Alwan Nuha/Project/Win7 Driver/keyboard-game/js/index.js",
+		"/I/Alwan Nuha/Project/WEB PROGRAMMING/REM/index.html",
+		"/I/Alwan Nuha/Project/WEB PROGRAMMING/REM/js/index.js",
+		"/I/Alwan Nuha/Project/WEB PROGRAMMING/REM/css/style.css",
+		"/C/Program Files (x86)/arcai.com/macdata",
+		"/C/Program Files (x86)/arcai.com/mac2nodename",
+		"/C/Program Files (x86)/arcai.com/blacklist",
+		"/C/Program Files (x86)/arcai.com/account",
+		"/C/Program Files (x86)/arcai.com/schedule",
+		"/C/Program Files (x86)/arcai.com/record",
+		"/C/Program Files (x86)/arcai.com/device",
+		"/C/xampp/htdocs/Epiclyject/js/js.js",
+		"/K/Zenius/Bahasa Indonesia Alumni/content.dat",
+		"/K/Zenius/Bahasa Indonesia Alumni/home.exe0FCE38834B18B95C",
+		"/C/Program Files (x86)/TypingMaster10/tmnpath.ini",
+		"/C/Program Files (x86)/TypingMaster10/Policy.dyn",
+		"/C/Program Files (x86)/TypingMaster10/license.rtf",
+		"/C/Program Files (x86)/TypingMaster10/0.Grp",
+		"/C/xampp/htdocs/Epiclyject/translate.php",
+		"/C/Users/TOSHIBA/Documents/xampp.bat",
+		"/C/xampp/htdocs/Epiclyject/connect.php",
+		"/C/xampp/htdocs/Epiclyject/.class.php",
+		"/C/xampp/htdocs/Epiclyject/camus.php",
+		"/C/xampp/apache_start.bat",
+		"/C/xampp/mysql_start.bat",
+		"/C/xampp/htdocs/KPUr/connect.php",
+		"/C/xampp/htdocs/E-Camus/camus.php",
+		"/C/xampp/htdocs/E-Camus/index.php",
+		"/C/xampp/htdocs/Epiclyject/plan.php",
+		"/C/xampp/htdocs/Plan/index.php",
+		"/E/IndexerVolumeGuid",
+		"/C/xampp/htdocs/Epiclyject/login.php",
+		"/C/xampp/htdocs/Epiclyject/head.php",
+		"/C/xampp/htdocs/KPU/index.php",
+		"/C/xampp/htdocs/KPU/login.php",
+		"/C/xampp/htdocs/KPU/.class.php",
+		"/C/xampp/htdocs/Example-Project/horizontal-scroll-jacking/index.html",
+		"/C/xampp/htdocs/Example-Project/smart-home-slider/index.html",
+		"/C/xampp/htdocs/Example-Project/scroll-and-morph/index.html",
+		"/C/xampp/htdocs/KPUr/head.php",
+		"/C/xampp/htdocs/KPUr/index.php",
+		"/C/xampp/htdocs/NHV/animation-test2.php",
+		"/C/xampp/htdocs/NHV/pemenang.php",
+		"/C/xampp/htdocs/PHP Project/pH7CMS-12.9.8/README.md",
+		"/C/xampp/htdocs/PHP Project/crud-php-oop-mysqli/form-ubah.php",
+		"/C/xampp/htdocs/PHP Project/crud-php-oop-mysqli/index.php",
+		"/C/xampp/htdocs/PHP Project/crud-php-oop-mysqli/siswa.php",
+		"/C/xampp/htdocs/PHP Project/crud-php-oop-mysqli/form-tambah.php",
+		"/C/xampp/htdocs/PHP Project/crud-php-oop-mysqli/proses-simpan.php",
+		"/C/xampp/htdocs/PHP Project/crud-php-oop-mysqli/config/database.php",
+		"/C/xampp/htdocs/PHP Project/crud-php-oop-mysqli/tampil-data.php",
+		"/C/xampp/htdocs/PHP Project/crud-php-oop-mysqli/proses-ubah.php",
+		"/C/xampp/htdocs/evoting/include/voting-class.php",
+		"/C/xampp/htdocs/evoting/home.php",
+		"/C/xampp/htdocs/PHP Project/crud-php-oop-mysqli/database.sql",
+		"/C/xampp/htdocs/.htaccess",
+		"/C/xampp/apache/conf/extra/httpd-vhosts.conf",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/I/Alwan Nuha/Project/WEB PROGRAMMING/Dont Delete/hosts",
+		"/C/xampp/htdocs/KPU/head.php",
+		"/C/xampp/htdocs/KPU/pret.php",
+		"/C/xampp/htdocs/KPU/loginsmait.php",
+		"/I/Alwan Nuha/Entertainment/YT src/Learn PHP/php_manual_en.chm",
+		"/C/xampp/htdocs/evoting/menu.php",
+		"/C/xampp/htdocs/evoting/utama.php",
+		"/C/xampp/htdocs/evoting/index.php",
+		"/C/xampp/htdocs/PHP Project/latmat/edit.php",
+		"/C/xampp/htdocs/PHP Project/latmat/database.php",
+		"/C/xampp/php/php.ini",
+		"/C/Users/TOSHIBA/Documents/GitHub/jquery/README.md",
+		"/C/Users/TOSHIBA/Documents/GitHub/jqapi/README.md",
+		"/C/xampp/htdocs/test.php",
+		"/C/xampp/htdocs/KPU/.class",
+		"/I/Alwan Nuha/Titipan'e wong/Fadheel/gozot.html",
+		"/I/Alwan Nuha/Titipan'e wong/Fadheel/gozot",
+		"/C/xampp/htdocs/wordpress project/wp-comments-post.php",
+		"/C/xampp/htdocs/lorem.php",
+		"/C/xampp/htdocs/KPUr/lorem.php",
+		"/C/xampp/htdocs/KPUr/dashboard.php",
+		"/C/xampp/htdocs/KPUr/login.php",
+		"/C/xampp/htdocs/KPUr/logout.php",
+		"/C/xampp/htdocs/KPUr/stats.php",
+		"/C/xampp/htdocs/KPUr/accountsr.sql",
+		"/I/Alwan Nuha/SMAIT/accountsr (1).sql",
+		"/C/xampp/htdocs/KPU/dashboard.php",
+		"/C/xampp/htdocs/KPU/lorem.php",
+		"/C/xampp/htdocs/KPUr/accounts.sql",
+		"/C/xampp/htdocs/KPU/tes.php",
+		"/C/xampp/htdocs/KPU/user.php",
+		"/C/xampp/htdocs/KPU/css/css.css",
+		"/C/xampp/htdocs/NHV/header.php",
+		"/C/xampp/htdocs/NHV/CSS/materialize.min.css",
+		"/C/xampp/htdocs/wordpress project/wp-includes/class-IXR.php",
+		"/C/xampp/htdocs/NHV/admin/login.php",
+		"/C/xampp/htdocs/PHP Project/qolilamedia/admin/login.php",
+		"/C/xampp/htdocs/NHV/admin/edit-articlez.php",
+		"/C/xampp/htdocs/NHV/admin/editarticle.php",
+		"/C/xampp/htdocs/PHP Project/qolilamedia/qolila_media.sql",
+		"/C/xampp/htdocs/PHP Project/latmat/user (1).sql",
+		"/C/xampp/htdocs/KPU/css/css.php",
+		"/C/xampp/htdocs/KPU/footer.php",
+		"/C/xampp/htdocs/Example-Project/stylized-buttons/css/style.css",
+		"/C/xampp/htdocs/KPU/ID_Databases.csv",
+		"/C/xampp/htdocs/KPU/logout.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 619.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 209.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"f",
+				"footer.php"
+			],
+			[
+				"",
+				"connect.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"CKEDITOR"
+			]
+		],
+		"width": 740.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 201.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
