@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SCORE COUNTER</title>
+	<link rel="stylesheet" type="text/css" href="css/score-board.css">
+	<link rel="shortcut icon" type="image/x-icon" href="img/E2.png">
+</head>
+<body>
+	<main>
+		<div class="row" style="font-size: 2em;">
+			<div class="col d6 center-align box-s bold"><span id="RedName">Lorem</span></div>
+			<div class="col d6 center-align box-s bold"><span id="BlueName">Ipsum</span></div>
+		</div>
+		<div class="center-align timer" id="time">00:00</div>
+		<div class="row">
+			<div class="col d6 center-align score hoverable" style="background-color: rgb(192,57,43);"><span id="red">0</span></div>
+			<div class="col d6 center-align score hoverable" style="background-color: rgb(52,152,219);"><span id="blue">0</span></div>
+		</div>
+		<div class="row">
+			<div class="col d12">
+				<a id="start" class="hoverable" href="#set-up">Click Here To Start</a>
+				<button class="btn" onclick="alert('Paused!       '+secondsRemaining+' Seconds Remaining')" style="transform: translateX(100%);">PAUSE</button>
+			</div>
+		</div>
+<!-- 		<div class="row">
+			<a href="#update" class="btn right">Check Update</a>
+		</div> -->
+	</main>
+		<div id="set-up" class="modal">
+			<div class="modals">
+				<a href="#">X</a>
+				<div class="modal-content">
+					<input type="text" id="PlayeRed" placeholder="Player( Red )">
+					<input type="text" id="PlayeRlue" placeholder="Player( Blue )">
+					<div id="inputArea"></div>
+				</div>
+			</div>
+		</div>
+		<a href="http://epiclygend.rf.gd" class="btn right" target="_blank">UPDATE</a>
+<!-- 		<div id="update" class="modal">
+			<div class="modals">
+				<a href="#">X</a>
+				<div class="modal-content">
+					<div class="updater">
+						<iframe src="About.txt"></iframe>
+						<iframe id="new-update" src=""></iframe>
+					</div>
+				</div>
+				<div class="modal-btn-footer">
+				</div>
+			</div>
+		</div> -->
+	<div class="box-m" id="e-product">
+		<div class="left"><a href="https://fb.com/100002806994728">MMA SMAIT Nur Hidayah</a></div>
+		<div class="right-align"><a href="https://fb.com/100002806994728"><span id="date"></span></a></div>
+	</div>
+</body>
+<script src="js/Timer.js"></script>
+<script type="text/javascript">
+	var redScore = 0,
+		blueScore = 0,
+		red = document.getElementById("red"),
+		blue = document.getElementById("blue"),
+		date = document.getElementById("date");
+	path = document.getElementById("new-update").setAttribute("src","https://epiclygend.rf.gd" + location.pathname + "About.txt");
+	function RedInc() {
+		redScore += 1;
+		red.innerHTML = redScore;
+	}
+	function BlueInc() {
+		blueScore += 1;
+		blue.innerHTML = blueScore;
+	}
+	date.innerHTML = new Date();
+</script>
+</html>
