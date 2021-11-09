@@ -12,6 +12,13 @@ export const projects: Component.CardProject.Props[] = [
     ],
   },
   {
+    title: 'Online Vote App',
+    thumbnailSrc: '/assets/img/projects/evote.jpg',
+    techStack: [
+      'https://github.com/php/web-php/blob/master/images/logos/php-logo.png?raw=true',
+    ],
+  },
+  {
     title: 'KPBI Membership Management',
     url: 'https://anggota.kpbi.or.id/',
     thumbnailSrc: '/assets/img/projects/kpbi.png',

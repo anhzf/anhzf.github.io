@@ -16,8 +16,7 @@
       <span>featured projects</span>
       <eva-icon
         name="arrow-downward"
-        width="1.3rem"
-        height="1.3rem"
+        class="w-5 h-5"
       />
     </div>
 

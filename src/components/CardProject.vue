@@ -37,7 +37,7 @@
             :key="i"
             :src="stack"
             :alt="stack"
-            class="w-3.5 h-3.5 p-[0.04rem]"
+            class="w-3.5 h-3.5 p-[0.04rem] object-scale-down"
           >
         </div>
       </div>

@@ -1,5 +1,5 @@
-import type { RouteRecordRaw } from 'vue-router';
 import generatedRoutes from 'virtual:generated-pages';
+import type { RouteRecordRaw } from 'vue-router';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -16,12 +16,12 @@ const routes: RouteRecordRaw[] = [
         name: 'Links',
         component: () => import('pages/Links.vue'),
       },
+      ...generatedRoutes,
+      {
+        path: '/:catchAll(.*)*',
+        component: () => import('pages/Error404.vue'),
+      },
     ],
-  },
-  ...generatedRoutes,
-  {
-    path: '/:catchAll(.*)*',
-    component: () => import('pages/Error404.vue'),
   },
 ];
 
