@@ -51,14 +51,14 @@ export default defineConfig(({ mode }) => ({
     WindiCSS(),
     // just enable eslint on dev mode
     mode !== 'production'
-      ? EsLintPlugin({
+      ? undefined
+      : EsLintPlugin({
         fix: true,
         include: [
           'src/**/*.ts',
           'src/**/*.vue',
         ],
-      })
-      : undefined,
+      }),
   ],
   ssgOptions: {
     script: 'async',

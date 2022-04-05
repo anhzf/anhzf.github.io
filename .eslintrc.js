@@ -40,5 +40,6 @@ module.exports = {
       // will ignore everything inside html attrs
       ignorePattern: '[\\w-]+="([^"]*)"',
     }],
+    'no-unused-vars': 'off',
   },
 };

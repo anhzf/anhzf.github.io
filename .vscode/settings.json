@@ -8,14 +8,15 @@
     "javascriptreact",
     "vue"
   ],
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true
-  },
   "conventionalCommits.scopes": [
     "ui",
     "page",
     "components",
     "content"
   ],
-  "liveServer.settings.root": "/dist"
+  "liveServer.settings.root": "/dist",
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  },
 }

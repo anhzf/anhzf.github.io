@@ -2,6 +2,15 @@ import type { Component } from 'src/models';
 
 export const projects: Component.CardProject.Props[] = [
   {
+    title: 'PanenPlaza',
+    url: 'https://panenplaza.id/apps/',
+    thumbnailSrc: '/assets/img/projects/panenplaza.jpg',
+    techStack: [
+      'https://nextjs.org/static/favicon/favicon-16x16.png',
+      '/assets/icons/react.svg',
+    ],
+  },
+  {
     title: 'Bersamabisa.ID Community',
     url: 'https://bersamabisa.id/',
     thumbnailSrc: '/assets/img/projects/bbid.png',
@@ -13,9 +22,12 @@ export const projects: Component.CardProject.Props[] = [
   },
   {
     title: 'Online Vote App',
+    url: 'https://anhzf-election.web.app/',
     thumbnailSrc: '/assets/img/projects/evote.jpg',
     techStack: [
-      'https://github.com/php/web-php/blob/master/images/logos/php-logo.png?raw=true',
+      '/assets/icons/quasar.svg',
+      '/assets/icons/firebase.svg',
+      '/assets/icons/vue.svg',
     ],
   },
   {
@@ -67,6 +79,11 @@ export const links: Component.CardLink.Props[] = [
     label: 'Instagram',
     url: 'https://www.instagram.com/alwan.nuha/',
     thumbnailSrc: 'https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png',
+  },
+  {
+    label: 'Linkedin',
+    url: 'https://www.linkedin.com/in/anhzf/',
+    thumbnailSrc: 'https://static-exp1.licdn.com/sc/h/5bukxbhy9xsil5mb7c2wulfbx',
   },
   {
     label: 'Medium Blogs',

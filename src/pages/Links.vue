@@ -1,12 +1,5 @@
 <template>
-  <header class="sticky top-0 -z-1 w-full h-[85vh] p-4 flex flex-col justify-center items-center gap-3">
-    <h1 class="font-black text-6xl text-center text-blue-gray-900">
-      Anhzf.Dev
-    </h1>
-    <span class="bg-light-blue-400/50 font-medium text-xl text-center text-white">
-      JAMStack Web Developer
-    </span>
-  </header>
+  <BigHero />
 
   <main
     id="main"
@@ -28,23 +21,13 @@
   </main>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script lang="ts" setup>
 import { useHead } from '@vueuse/head';
 import { links } from '@/content-data';
 import CardLink from 'components/CardLink.vue';
+import BigHero from 'components/BigHero.vue';
 
-export default defineComponent({
-  name: 'PageLinks',
-  components: { CardLink },
-  setup() {
-    useHead({
-      title: 'Links - Anhzf.Dev',
-    });
-
-    return {
-      links,
-    };
-  },
+useHead({
+  title: 'Links - Anhzf.Dev',
 });
 </script>
