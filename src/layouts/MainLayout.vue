@@ -11,9 +11,7 @@
     <Blob />
   </ClientOnly>
 
-  <footer class="p-8 bg-purple-400 text-center">
-    <span class="text-blue-50">Copyright © 2021 All rights reserved</span>
-  </footer>
+  <Footer />
 
   <CursorFollower v-if="!isMobile" />
 </template>
@@ -21,12 +19,15 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import MegaMenu from 'components/MegaMenu.vue';
+import Footer from 'components/Footer.vue';
 import CursorFollower from 'components/CursorFollower';
 import Blob from 'components/Blob.vue';
 
 export default defineComponent({
   name: 'MainLayout',
-  components: { CursorFollower, MegaMenu, Blob },
+  components: {
+    CursorFollower, MegaMenu, Blob, Footer,
+  },
   setup() {
     const isMobile = import.meta.env.SSR
       ? false

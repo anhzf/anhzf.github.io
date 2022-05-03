@@ -6,13 +6,13 @@
       </router-link>
     </h1>
     <div class="flex bg-light-blue-400/50 font-medium text-xl text-center text-white items-center">
-      <span>Your dream </span>
+      <span>Build high quality </span>
       <transition-group
         tag="ul"
-        enter-from-class="transition duration-700 transform opacity-30 translate-y-4"
+        enter-from-class="transition duration-700 transform opacity-30 translate-y-6"
         enter-to-class="transition duration-700 transform opacity-100 translate-y-0"
         leave-from-class="transition duration-700 transform opacity-100 translate-y-0"
-        leave-to-class="transition duration-700 transform opacity-30 translate-y-4"
+        leave-to-class="transition duration-700 transform opacity-30 -translate-y-6"
         class="relative w-32 h-full inline-block overflow-hidden"
       >
         <li
@@ -24,7 +24,6 @@
           {{ el }}
         </li>
       </transition-group>
-      <span> with Javascript</span>
     </div>
   </header>
 </template>
