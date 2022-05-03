@@ -1,5 +1,5 @@
 <template>
-  <footer class="p-8 bg-purple-400 flex-col-reverse md:flex justify-between">
+  <footer class="p-8 bg-purple-400 flex flex-col-reverse md:flex-row justify-between">
     <router-link
       to="/"
       class="hover:underline text-sm flex items-center"
