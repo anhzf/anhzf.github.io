@@ -16,7 +16,7 @@
 
         <div class="absolute -z-1 inset-0 transform -translate-z-px scale-200 animated animate-slide-in-up">
           <img
-            src="src/img/blue-mosque-istanbul-removebg-preview.png"
+            src="src/assets/img/blue-mosque-istanbul-removebg-preview.png"
             alt="mosque"
             class="w-full h-full object-cover object-bottom"
           >
@@ -25,7 +25,7 @@
 
         <div class="absolute -z-1 inset-0 transform -translate-z-1.5px scale-250">
           <img
-            src="src/img/ketupat__al-fitr_7635903__pngtree.png?width=600"
+            src="src/assets/img/ketupat__al-fitr_7635903__pngtree.png?width=600"
             alt="decoration"
             class="w-40"
           >
@@ -33,7 +33,7 @@
 
         <div class="absolute -z-1 inset-0 transform -translate-z-3px scale-400">
           <img
-            src="src/img/ketupat__al-fitr_7635903__pngtree.png?width=600"
+            src="src/assets/img/ketupat__al-fitr_7635903__pngtree.png?width=600"
             alt="decoration"
             class="absolute w-60 md:w-96 right-0"
           >
@@ -164,6 +164,6 @@ body
   @apply text-xl md:text-3xl inline-block absolute
 
 #message1
-  background-image: url('src/img/biel-morro-J_F_003jcEQ-unsplash.jpg?width=1280')
+  background-image: url('src/assets/img/biel-morro-J_F_003jcEQ-unsplash.jpg?width=1280')
   @apply bg-cover
 </style>
