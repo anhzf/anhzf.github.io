@@ -25,7 +25,7 @@
 
         <div class="absolute -z-1 inset-0 transform -translate-z-1.5px scale-250">
           <img
-            src="/assets/img/—Pngtree—ketupat eid al-fitr_7635903.png"
+            src="/assets/img/ketupat__al-fitr_7635903__pngtree.png"
             alt="decoration"
             class="w-40"
           >
@@ -33,7 +33,7 @@
 
         <div class="absolute -z-1 inset-0 transform -translate-z-3px scale-400">
           <img
-            src="/assets/img/—Pngtree—ketupat eid al-fitr_7635903.png"
+            src="/assets/img/ketupat__al-fitr_7635903__pngtree.png"
             alt="decoration"
             class="absolute w-60 md:w-96 right-0"
           >
@@ -88,9 +88,8 @@
 
 <script lang="ts" setup>
 import { onMounted, onUnmounted, ref } from 'vue';
-import { useElementVisibility, useIntersectionObserver, whenever } from '@vueuse/core';
+import { useIntersectionObserver } from '@vueuse/core';
 import { useHead } from '@vueuse/head';
-
 import anime from 'animejs';
 import Footer from 'components/Footer.vue';
 
@@ -161,6 +160,6 @@ body
   @apply text-xl md:text-3xl inline-block absolute
 
 #toYou
-  background-image: url(/assets/img/biel-morro-J_F_003jcEQ-unsplash.jpg)
+  background-image: url('/assets/img/biel-morro-J_F_003jcEQ-unsplash.jpg')
   @apply bg-cover
 </style>

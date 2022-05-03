@@ -25,7 +25,7 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/happyIedMubarak1443',
-    component: () => import('src/pages/creations/HappyIedMubarak1443.vue'),
+    component: () => import('pages/creations/HappyIedMubarak1443.vue'),
   },
 ];
 
