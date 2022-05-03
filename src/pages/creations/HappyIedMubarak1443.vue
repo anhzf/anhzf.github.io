@@ -1,10 +1,10 @@
 <template>
   <div
-    class="perspect-px overflow-x-hidden overflow-y-auto h-screen"
+    class="perspect-px overflow-x-hidden overflow-y-auto h-screen snap snap-y snap-proximity"
     @scroll="onScroll"
   >
     <main class="preserve-3d">
-      <section class="relative flex flex-col w-full min-h-screen preserve-3d">
+      <section class="snap-start relative flex flex-col w-full min-h-screen preserve-3d">
         <h1
           id="title"
           class="self-center relative font-black mb-[40vh] transform -translate-z-5px scale-600 animated animate-zoom-in"
@@ -16,7 +16,7 @@
 
         <div class="absolute -z-1 inset-0 transform -translate-z-px scale-200 animated animate-slide-in-up">
           <img
-            src="/assets/img/blue-mosque-istanbul-removebg-preview.png"
+            src="src/img/blue-mosque-istanbul-removebg-preview.png"
             alt="mosque"
             class="w-full h-full object-cover object-bottom"
           >
@@ -25,7 +25,7 @@
 
         <div class="absolute -z-1 inset-0 transform -translate-z-1.5px scale-250">
           <img
-            src="/assets/img/ketupat__al-fitr_7635903__pngtree.png"
+            src="src/img/ketupat__al-fitr_7635903__pngtree.png?width=600"
             alt="decoration"
             class="w-40"
           >
@@ -33,7 +33,7 @@
 
         <div class="absolute -z-1 inset-0 transform -translate-z-3px scale-400">
           <img
-            src="/assets/img/ketupat__al-fitr_7635903__pngtree.png"
+            src="src/img/ketupat__al-fitr_7635903__pngtree.png?width=600"
             alt="decoration"
             class="absolute w-60 md:w-96 right-0"
           >
@@ -41,8 +41,8 @@
       </section>
 
       <section
-        id="toYou"
-        class="relative h-120vh -z-1"
+        id="message1"
+        class="snap-start snap-always relative h-120vh -z-1"
       >
         <div
           ref="dontForgetTilawahSectionRef"
@@ -50,7 +50,7 @@
         >
           <blockquote
             v-if="isDontForgetTilawahSectionVisible"
-            class="font-bold"
+            class="font-bold text-shadow-lg"
           >
             <span class="text-6xl md:text-8xl block animated animate-fade-in-up">Lebaran </span>
             <span class="text-4xl md:text-6xl block text-gray-300 animated animate-fade-in-up animate-delay-300">jangan lupa</span>
@@ -81,7 +81,11 @@
     </main>
 
     <div class="mt-50vh pt-50vh preserve-3d bg-dark-900 -z-1">
-      <Footer class="" />
+      <Footer>
+        <template #right>
+          Happy Ied 1443H
+        </template>
+      </Footer>
     </div>
   </div>
 </template>
@@ -159,7 +163,7 @@ body
 .star
   @apply text-xl md:text-3xl inline-block absolute
 
-#toYou
-  background-image: url('/assets/img/biel-morro-J_F_003jcEQ-unsplash.jpg')
+#message1
+  background-image: url('src/img/biel-morro-J_F_003jcEQ-unsplash.jpg?width=1280')
   @apply bg-cover
 </style>

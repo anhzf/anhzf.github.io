@@ -8,6 +8,7 @@ import Pages from 'vite-plugin-pages';
 import WindiCSS from 'vite-plugin-windicss';
 import EsLintPlugin from 'vite-plugin-eslint';
 import MarkdownItPluginHighlightJs from 'markdown-it-highlightjs';
+import { imagetools } from 'vite-imagetools';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -59,6 +60,7 @@ export default defineConfig(({ mode }) => ({
           'src/**/*.vue',
         ],
       }),
+    imagetools(),
   ],
   ssgOptions: {
     script: 'async',

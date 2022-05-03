@@ -2,6 +2,7 @@ import { defineConfig } from 'windicss/helpers';
 import defaultTheme from 'windicss/defaultTheme';
 import PluginTypography from 'windicss/plugin/typography';
 import PluginLineClamp from 'windicss/plugin/line-clamp';
+import PluginScrollSnap from 'windicss/plugin/scroll-snap';
 
 export default defineConfig({
   safelist: ['prose', 'fill-current'],
@@ -34,5 +35,6 @@ export default defineConfig({
   plugins: [
     PluginTypography,
     PluginLineClamp,
+    PluginScrollSnap,
   ],
 });
