@@ -1,1 +1,0 @@
-import{_ as t,f as o,e as s,h as e}from"./app.3222cc66.js";const n={},r=e("dt",null,[e("h1",{class:"font-bold text-9xl"}," 404 ")],-1),a=e("dd",null,"Uh oh! Your wanted page doesn't exists, maybe typo?",-1),c=[r,a];function _(d,l){return s(),o("div",null,c)}var h=t(n,[["render",_]]);export{h as default};
