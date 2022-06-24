@@ -1,0 +1,25 @@
+{
+  "folders": [
+    {
+      "name": "Personal Website",
+      "path": "."
+    },
+    {
+      "name": "Kuliah/Microteaching UAS",
+      "path": "./projects/college_microteaching_uas-slides/"
+    }
+  ],
+  "settings": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "[vue]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    },
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "conventionalCommits.scopes": [
+      "ui",
+      "page",
+      "components",
+      "content"
+    ],
+  }
+}

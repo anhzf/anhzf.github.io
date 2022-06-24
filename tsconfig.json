@@ -4,6 +4,7 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
+    "allowJs": true,
     "strict": true,
     "jsx": "preserve",
     "sourceMap": true,
@@ -14,13 +15,23 @@
       "dom"
     ],
     "paths": {
-      "components/*": ["src/components/*"],
-      "pages/*": ["src/pages/*"],
-      "src/*": ["src/*"],
-      "@/*": ["*"]
+      "components/*": [
+        "src/components/*"
+      ],
+      "pages/*": [
+        "src/pages/*"
+      ],
+      "src/*": [
+        "src/*"
+      ],
+      "@/*": [
+        "*"
+      ]
     },
     "plugins": [
-      { "name": "@vuedx/typescript-plugin-vue" }
+      {
+        "name": "@vuedx/typescript-plugin-vue"
+      }
     ],
     "skipLibCheck": true
   },
@@ -33,6 +44,12 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/assets/**/*.vue",
-    ".eslintrc.js"
+    ".eslintrc.js",
+    "projects/*/**/*",
+    // "projects/*/setup/**/*",
+    // "projects/*/components/**/*",
   ],
+  "exclude": [
+    "node_modules"
+  ]
 }

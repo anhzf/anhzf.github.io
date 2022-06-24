@@ -26,6 +26,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'import/extensions': 'off',
     // ts
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     // vue
@@ -41,5 +42,7 @@ module.exports = {
       ignorePattern: '[\\w-]+="([^"]*)"',
     }],
     'no-unused-vars': 'off',
+    'no-unused-expressions': 'off',
+    'no-undef': 'off',
   },
 };

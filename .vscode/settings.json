@@ -1,6 +1,5 @@
 {
-  "typescript.tsdk": "node_modules\\typescript\\lib",
-  "vetur.validation.template": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
   "eslint.validate": [
     "typescript",
     "typescriptreact",
@@ -8,15 +7,14 @@
     "javascriptreact",
     "vue"
   ],
-  "conventionalCommits.scopes": [
-    "ui",
-    "page",
-    "components",
-    "content"
-  ],
   "liveServer.settings.root": "/dist",
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "[vue]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "projects/**": true,
+  }
 }
