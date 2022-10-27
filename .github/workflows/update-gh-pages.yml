@@ -22,9 +22,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-      working-directory: ./web
     - run: npm ci
+      working-directory: ./web
     - run: npm run generate
+      working-directory: ./web
     
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.5
