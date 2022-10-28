@@ -13,14 +13,25 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'anhzf Personal Website',
+      htmlAttrs: {
+        lang: 'en',
+      },
       meta: [
         {
+          name: 'description',
+          content: 'The Software Developer Site — Project, Blog, Portfolio, and Whatever I want to share 😁',
+        },
+        {
+          name: 'og:description',
+          content: 'The Software Developer Site — Project, Blog, Portfolio, and Whatever I want to share 😁',
+        },
+        {
           name: 'image',
-          content: '/logo.png',
+          content: '/favicon.ico',
         },
         {
           name: 'og:image',
-          content: '/logo.png',
+          content: '/favicon.ico',
         },
       ],
       script: [

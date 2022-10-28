@@ -1,7 +1,7 @@
 <template>
   <div class="fixed z-50 top-0 right-0 ">
     <div class="m-6">
-      <button
+      <button aria-label="Open Menu"
         class="flex p-2 bg-teal-300/50 hover:bg-amber-300/50 justify-center items-center rounded-full transition-colors"
         @click="isOpen = !isOpen">
         <div class="i-eva:menu-2-outline cursor-pointer w-12 h-12 text-slate-900" />

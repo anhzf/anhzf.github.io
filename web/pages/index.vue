@@ -8,13 +8,15 @@
     </div>
 
     <section id="projects" class="p-8 flex flex-col items-center gap-8">
+      <h2 class="hidden">Pinned Projects</h2>
+
       <content-doc path="/projects" v-slot="{ doc: { body: projects } }" :head="false">
         <card-project v-for="project in projects" :key="project.title" v-bind="project" />
       </content-doc>
 
-      <a title="view more on GitHub" href="https://github.com/anhzf" target="_blank"
+      <a title="See more on GitHub" href="https://github.com/anhzf" target="_blank"
         class="group font-medium text-blue-gray-400 flex items-center gap-1">
-        <span>More</span>
+        <span>See More</span>
         <div class="i-eva:arrow-forward-outline block transform group-hover:translate-x-1.5 transition-transform" />
       </a>
     </section>

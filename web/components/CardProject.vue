@@ -4,9 +4,9 @@
       <img :src="thumbnailSrc" :alt="title" :width="350" format="webp" class="object-cover w-full h-full" />
     </div>
     <div class="px-5 py-4">
-      <h5 class="font-bold text-indigo-400 line-clamp-1" :title="title">
+      <h3 class="font-bold text-indigo-400 line-clamp-1" :title="title">
         {{ title }}
-      </h5>
+      </h3>
 
       <div class="pt-1 flex justify-between">
         <a :href="url"
