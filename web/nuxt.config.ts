@@ -57,7 +57,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     '@unocss/nuxt',
-    '@nuxt/image-edge'
+    // '@nuxt/image-edge'
   ],
   unocss: {
     presets: [
