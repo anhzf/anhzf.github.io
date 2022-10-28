@@ -5,6 +5,11 @@ name: Update Github Pages
 
 on:
   push:
+
+defaults:
+  run:
+    working-directory: web
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,20 +22,18 @@ jobs:
       with:
         version: 7
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
     - name: Install dependencies
       run: pnpm install --prod
-      working-directory: ./web
     - name: Build
       run: pnpm run generate
-      working-directory: ./web
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
-        folder: web/.output/public
+        folder: .output/public
         clean: true
       
