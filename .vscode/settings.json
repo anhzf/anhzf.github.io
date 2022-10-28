@@ -1,13 +1,4 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "eslint.validate": [
-    "typescript",
-    "typescriptreact",
-    "javascript",
-    "javascriptreact",
-    "vue"
-  ],
-  "liveServer.settings.root": "/dist",
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -15,6 +6,6 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
-    "projects/**": true,
+    "{web}/": true,
   }
 }

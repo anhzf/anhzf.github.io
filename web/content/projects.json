@@ -1,0 +1,58 @@
+{
+  "body": [
+    {
+      "title": "PanenPlaza",
+      "url": "https://panenplaza.id/apps/",
+      "thumbnailSrc": "/assets/img/projects/panenplaza.jpg",
+      "techStack": [
+        "https://nextjs.org/static/favicon/favicon-16x16.png",
+        "/assets/icons/react.svg"
+      ]
+    },
+    {
+      "title": "BEM UNS 2022 Website",
+      "url": "https://bemuns.org/",
+      "thumbnailSrc": "/assets/img/projects/bemuns2022.png",
+      "techStack": [
+        "/assets/icons/nuxt.png"
+      ]
+    },
+    {
+      "title": "Bersamabisa.ID Community",
+      "url": "https://bersamabisa.id/",
+      "thumbnailSrc": "/assets/img/projects/bbid.png",
+      "techStack": [
+        "/assets/icons/quasar.svg",
+        "/assets/icons/firebase.svg",
+        "/assets/icons/vue.svg"
+      ]
+    },
+    {
+      "title": "Online Vote App",
+      "url": "https://anhzf-election.web.app/",
+      "thumbnailSrc": "/assets/img/projects/evote.jpg",
+      "techStack": [
+        "/assets/icons/quasar.svg",
+        "/assets/icons/firebase.svg",
+        "/assets/icons/vue.svg"
+      ]
+    },
+    {
+      "title": "KPBI Membership Management",
+      "url": "https://anggota.kpbi.or.id/",
+      "thumbnailSrc": "/assets/img/projects/kpbi.png",
+      "techStack": [
+        "/assets/icons/vue.svg",
+        "/assets/icons/laravel.svg"
+      ]
+    },
+    {
+      "title": "Sebelas Maret International IoT Challenges 2021",
+      "url": "https://iotchallenges.ft.uns.ac.id/",
+      "thumbnailSrc": "/assets/img/projects/iotchallenges.png",
+      "techStack": [
+        "/assets/icons/react.svg"
+      ]
+    }
+  ]
+}
