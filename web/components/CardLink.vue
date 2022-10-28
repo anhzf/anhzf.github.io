@@ -13,7 +13,7 @@
 
     <div
       class="flex-shrink-0 relative overflow-hidden w-28 h-28 bg-zinc-100 rounded-2xl shadow-lg group-hover:shadow-xl group-active:shadow-sm group-hover:scale-110 group-active:scale-90 transition-transform,box-shadow">
-      <img :src="thumbnailSrc" :alt="label" class="object-cover w-full h-full">
+      <img :src="thumbnailSrc" :alt="label" :width="200" format="webp" class="object-cover w-full h-full" />
     </div>
   </a>
 </template>

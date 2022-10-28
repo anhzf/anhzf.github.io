@@ -1,27 +1,87 @@
-<template>
-  <main class="w-full max-w-prose prose text-xl mx-auto my-8 bg-white px-8 py-4 shadow">
-    <content-doc v-slot="{ doc }">
-      <h1>{{ doc.title }}</h1>
-
-      <img :src="doc.image" :alt="`Cover ${doc.title}`" class="aspect-16/9 w-full object-cover">
-
-      <section>
-        <span class="text-slate-300">Table of Contents</span>
-        <ul>
-          <li v-for="link of doc.body.toc.links" :key="link.id"
-            :class="{ 'toc2': link.depth === 2, 'toc3': link.depth === 3 }">
-            <nuxt-link :to="`#${link.id}`">{{ link.text }}</nuxt-link>
-          </li>
-        </ul>
-      </section>
-
-      <content-renderer :value="doc" class="text-base [&>pre]:bg-slate-900" />
-    </content-doc>
-  </main>
-</template>
-
 <script lang="ts" setup>
+const shareUrl = computed(() => globalThis.location?.href);
+const { share } = useShare();
+const onShareClick = () => {
+  share({
+    url: shareUrl.value,
+  })
+}
+
 useHead({
   titleTemplate: '%s — anhzf blogs',
 })
 </script>
+
+<template>
+  <main class="flex flex-col gap-4 m-8 lg:m-16">
+    <content-doc v-slot="{ doc }">
+      <div class="w-full max-w-prose prose prose-slate text-xl bg-white py-4 shadow">
+        <!-- Breadcrumbs -->
+        <div
+          class="text-base flex items-center gap-2 mb-8 px-8 [&>a]:(text-sm text-slate-300 no-underline) [&>a:hover]:(underline)">
+          <nuxt-link :to="{ name: 'index' }">
+            anhzf.dev
+          </nuxt-link>
+
+          <div class="i-eva:chevron-right-outline text-gray-400"></div>
+
+          <nuxt-link :to="{ name: 'blogs' }">
+            blogs
+          </nuxt-link>
+
+          <div class="i-eva:chevron-right-outline text-gray-400"></div>
+
+          <nuxt-link :to="doc._path" class="!text-slate-500">
+            {{ doc.title }}
+          </nuxt-link>
+        </div>
+
+        <!-- Header. Title, Cover -->
+        <section class="flex flex-col gap-2">
+          <h1 class="px-8">{{ doc.title }}</h1>
+          <img :src="doc.image" :alt="`Cover ${doc.title}`" :width="800" format="webp"
+            class="aspect-16/9 w-full object-cover bg-slate-300" />
+          <div class="px-8">
+            <hr class="divider">
+          </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="px-8 text-base">
+          <span class="text-slate-500">Table of Contents</span>
+          <ul class="m-0">
+            <li v-for="link of doc.body.toc.links" :key="link.id"
+              :class="{ 'toc2': link.depth === 2, 'toc3': link.depth === 3 }">
+              <nuxt-link :to="`#${link.id}`">{{ link.text }}</nuxt-link>
+            </li>
+          </ul>
+          <hr class="divider">
+        </section>
+
+        <content-renderer :value="doc" class="text-base [&>pre]:bg-slate-900 px-8" />
+
+        <!-- Actions -->
+        <section class="flex flex-col px-8 py-4">
+          <hr class="divider">
+
+          <div class="flex gap-4">
+            <button
+              class="text-base text-white flex items-center gap-1 px-4 py-2 bg-violet-500 hover:bg-violet-400 active:bg-violet-600 shadow-md rounded-md"
+              @click="onShareClick">
+              <div class="i-eva:share-outline w-4 h-4"></div>
+              <span class="font-medium">Share this post</span>
+            </button>
+          </div>
+        </section>
+      </div>
+
+      <grid-blog title="Related Blogs" title-as="h2"
+        :query="{ limit: 5, where: { _id: { $ne: doc._id }, tags: { $containsAny: doc.tags } } }" class="px-0" />
+    </content-doc>
+  </main>
+</template>
+
+<style lang="sass" scoped>
+.divider
+  @apply h-2px w-full border-0 bg-blue-300
+</style>

@@ -1,7 +1,8 @@
 ---
 title: "Create Palestine Flag with Single <div />"
 description: "CSS Trick: Create Palestine Flag with Single <div />"
-image: "/assets/img/links/Optimized-palestine-single-div.png"
+image: "/assets/img/blogs/2021-06-28_palestine-single-div_350w.webp"
+tags: ["tutorial", "html", "css", "css-tricks"]
 ---
 
 ## Working Demo
@@ -112,4 +113,8 @@ image: "/assets/img/links/Optimized-palestine-single-div.png"
     0 76px 100px rgba(0, 0, 0, 0.14)
   ;
 }
+
 ```
+
+## Closing Statement
+Thank you! I hope you enjoyed this post. If you liked this post, please share it with your friends.

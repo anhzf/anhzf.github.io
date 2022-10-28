@@ -7,9 +7,22 @@ import transformerVariantGroup from '@unocss/transformer-variant-group'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  experimental: {
+    payloadExtraction: false,
+  },
   app: {
     head: {
       title: 'anhzf Personal Website',
+      meta: [
+        {
+          name: 'image',
+          content: '/logo.png',
+        },
+        {
+          name: 'og:image',
+          content: '/logo.png',
+        },
+      ],
       script: [
         {
           async: true,
@@ -19,7 +32,8 @@ export default defineNuxtConfig({
         {
           async: true,
           src: 'https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js',
-          'data-custom-element': 'amp-auto-ads',
+          // @ts-ignore
+          'custom-element': 'amp-auto-ads',
         },
       ],
     }
@@ -32,6 +46,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     '@unocss/nuxt',
+    '@nuxt/image-edge'
   ],
   unocss: {
     presets: [
@@ -50,8 +65,14 @@ export default defineNuxtConfig({
     ],
   },
   content: {
+    markdown: {
+      toc: {
+        depth: 3,
+        searchDepth: 3,
+      }
+    },
     highlight: {
       theme: 'monokai',
     }
-  }
+  },
 })

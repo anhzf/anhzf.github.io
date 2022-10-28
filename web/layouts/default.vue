@@ -13,7 +13,7 @@
     </client-only>
 
     <footer class="p-8 bg-purple-400 flex flex-col-reverse md:flex-row justify-between items-center">
-      <nuxt-link :to="{ name: 'index' }" class="hover:underline text-sm flex items-center">
+      <nuxt-link :to="{ name: 'index' }" class="hover:underline text-purple-50 flex items-center">
         anhzf.dev
       </nuxt-link>
 
