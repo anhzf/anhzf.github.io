@@ -14,7 +14,8 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: github-pages
+    env:
+      GOOGLE_AD_CLIENT: ca-pub-9429563065756061
     strategy:
       matrix:
         node-version: [16.x]
