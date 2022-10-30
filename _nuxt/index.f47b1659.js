@@ -1,1 +1,0 @@
-import{_ as o}from"./GridBlog.vue_vue_type_script_setup_true_lang.eb7f7f66.js";import{G as t,o as n,i as c,P as r}from"./entry.7d5c7183.js";import"./CardBlog.vue_vue_type_script_setup_true_lang.1f319787.js";const s={};function _(a,i){const e=o;return n(),c("main",null,[r(e,{title:"All Blogs"})])}const p=t(s,[["render",_]]);export{p as default};
