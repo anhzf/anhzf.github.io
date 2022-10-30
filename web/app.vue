@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+const runtimeCfg = useRuntimeConfig();
+</script>
+
 <template>
   <div>
     <NuxtLayout>
@@ -5,7 +9,7 @@
     </NuxtLayout>
 
     <teleport to="body">
-      <amp-auto-ads v-pre type="adsense" data-ad-client="ca-pub-9429563065756061" />
+      <amp-auto-ads type="adsense" :data-ad-client="runtimeCfg.googleAdClient" />
     </teleport>
   </div>
 </template>

@@ -13,12 +13,12 @@ useHead({
 </script>
 
 <template>
-  <main class="flex flex-col gap-4 m-8 lg:m-16">
+  <main class="flex flex-col gap-4 m-2 md:m-8 lg:m-16">
     <content-doc v-slot="{ doc }">
       <div class="w-full max-w-prose prose prose-slate text-xl bg-white py-4 shadow">
         <!-- Breadcrumbs -->
         <div
-          class="text-base flex items-center gap-2 mb-8 px-8 [&>a]:(text-sm text-slate-300 no-underline) [&>a:hover]:(underline)">
+          class="text-base flex items-center flex-wrap gap-x-2 mb-8 px-4 md:px-8 [&>a]:(text-sm text-slate-300 no-underline) [&>a:hover]:(underline)">
           <nuxt-link :to="{ name: 'index' }">
             anhzf.dev
           </nuxt-link>
@@ -38,16 +38,16 @@ useHead({
 
         <!-- Header. Title, Cover -->
         <section class="flex flex-col gap-2">
-          <h1 class="px-8">{{ doc.title }}</h1>
+          <h1 class="px-4 md:px-8">{{ doc.title }}</h1>
           <img :src="doc.image" :alt="`Cover ${doc.title}`" :width="800" format="webp"
             class="aspect-16/9 w-full object-cover bg-slate-300" />
-          <div class="px-8">
+          <div class="px-4 md:px-8">
             <hr class="divider">
           </div>
         </section>
 
         <!-- Table of Contents -->
-        <section class="px-8 text-base">
+        <section class="px-4 md:px-8 text-base">
           <span class="text-slate-500">Table of Contents</span>
           <ul class="m-0">
             <li v-for="link of doc.body.toc.links" :key="link.id"
@@ -58,10 +58,10 @@ useHead({
           <hr class="divider">
         </section>
 
-        <content-renderer :value="doc" class="text-base [&>pre]:bg-slate-900 px-8" />
+        <content-renderer :value="doc" class="text-base [&>pre]:bg-slate-900 px-4 md:px-8" />
 
         <!-- Actions -->
-        <section class="flex flex-col px-8 py-4">
+        <section class="flex flex-col px-4 md:px-8 py-4">
           <hr class="divider">
 
           <div class="flex gap-4">

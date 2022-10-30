@@ -5,10 +5,14 @@ import presetWebFonts from '@unocss/preset-web-fonts'
 import transformerDirectives from '@unocss/transformer-directives'
 import transformerVariantGroup from '@unocss/transformer-variant-group'
 
+const IGNORED_CUSTOM_ELEMENTS = Object.freeze([
+  'amp-auto-ads'
+]);
+
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  experimental: {
-    payloadExtraction: false,
+  runtimeConfig: {
+    googleAdClient: process.env.GOOGLE_AD_CLIENT,
   },
   app: {
     head: {
@@ -19,10 +23,6 @@ export default defineNuxtConfig({
       meta: [
         {
           name: 'description',
-          content: 'The Software Developer Site — Project, Blog, Portfolio, and Whatever I want to share 😁',
-        },
-        {
-          name: 'og:description',
           content: 'The Software Developer Site — Project, Blog, Portfolio, and Whatever I want to share 😁',
         },
         {
@@ -37,8 +37,7 @@ export default defineNuxtConfig({
       script: [
         {
           async: true,
-          src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-          'data-ad-client': process.env.GOOGLE_DATA_AD_CLIENT,
+          src: `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.GOOGLE_AD_CLIENT}`,
         },
         {
           async: true,
@@ -53,6 +52,11 @@ export default defineNuxtConfig({
     '@unocss/reset/tailwind.css',
     '~/assets/global.sass'
   ],
+  vue: {
+    compilerOptions: {
+      isCustomElement: tag => IGNORED_CUSTOM_ELEMENTS.includes(tag),
+    }
+  },
   modules: [
     '@nuxt/content',
     '@vueuse/nuxt',
