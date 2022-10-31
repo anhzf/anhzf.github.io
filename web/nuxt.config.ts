@@ -39,10 +39,7 @@ export default defineNuxtConfig({
           async: true,
           src: 'https://www.googletagmanager.com/gtag/js?id=G-FKDR98EN74'
         },
-        {
-          async: true,
-          src: '/ga.js'
-        },
+        { src: '/ga.js' },
         {
           async: true,
           src: `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.GOOGLE_AD_CLIENT}`,
