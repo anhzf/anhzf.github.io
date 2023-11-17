@@ -16,28 +16,18 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GOOGLE_AD_CLIENT: ca-pub-9429563065756061
-    strategy:
-      matrix:
-        node-version: [16.x]
     steps:
-    - uses: actions/checkout@v3
-    - uses: pnpm/action-setup@v2.2.4
-      with:
-        version: 7
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'pnpm'
-        cache-dependency-path: '**/pnpm-lock.yaml'
-    - name: Install dependencies
-      run: pnpm install --shamefully-hoist
-    - name: Build
-      run: pnpm run generate
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        branch: gh-pages
-        folder: web/.output/public
-        clean: true
-      
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: npm run generate
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: web/.output/public
+          clean: true
