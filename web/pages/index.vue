@@ -11,7 +11,9 @@
       <h2 class="hidden">Pinned Projects</h2>
 
       <content-doc path="/projects" v-slot="{ doc: { body: projects } }" :head="false">
-        <card-project v-for="project in projects" :key="project.title" v-bind="project" />
+        <template v-if="projects">
+          <card-project v-for="project in projects" :key="project?.title" v-bind="project" />
+        </template>
       </content-doc>
 
       <a title="See more on GitHub" href="https://github.com/anhzf" target="_blank"

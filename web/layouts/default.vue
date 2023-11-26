@@ -1,3 +1,11 @@
+<script lang="ts" setup>
+import '@/assets/portofolio.scss';
+
+const isMobile = import.meta.env.SSR
+  ? false
+  : /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+</script>
+
 <template>
   <div class="min-h-100vh flex flex-col">
     <nav>
@@ -17,20 +25,13 @@
         anhzf.dev
       </nuxt-link>
 
-      <span class="text-blue-50 text-center">Copyright © 2022 All rights reserved</span>
+      <span class="text-blue-50 text-center">
+        Copyright © 2022 All rights reserved
+      </span>
 
-      <div class="text-sm"></div>
+      <div class="text-sm" />
     </footer>
-
 
     <cursor-follower v-if="!isMobile" />
   </div>
 </template>
-
-<script lang="ts" setup>
-
-
-const isMobile = import.meta.env.SSR
-  ? false
-  : /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-</script>

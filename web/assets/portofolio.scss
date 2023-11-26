@@ -1,0 +1,7 @@
+body {
+  --at-apply: bg-blue-50;
+}
+
+*::selection {
+  --at-apply: bg-light-blue-400/40;
+}

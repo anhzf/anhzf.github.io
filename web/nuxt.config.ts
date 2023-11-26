@@ -55,7 +55,7 @@ export default defineNuxtConfig({
   },
   css: [
     '@unocss/reset/tailwind.css',
-    '~/assets/global.sass'
+    '~/assets/global.scss'
   ],
   vue: {
     compilerOptions: {
@@ -63,6 +63,7 @@ export default defineNuxtConfig({
     }
   },
   modules: [
+    '@nuxthq/studio',
     '@nuxt/content',
     '@vueuse/nuxt',
     '@unocss/nuxt',
