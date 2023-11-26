@@ -16,6 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GOOGLE_AD_CLIENT: ca-pub-9429563065756061
+      NUXT_PUBLIC_STUDIO_TOKENS: ${{ secrets.NUXT_PUBLIC_STUDIO_TOKENS }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
