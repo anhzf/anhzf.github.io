@@ -1,1 +1,0 @@
-import{_ as o}from"./_plugin-vue_export-helper.c27b6911.js";import{c as e,o as s,a as t}from"./entry.cbe8610d.js";const c={},n=t("h1",null,"Kosong jg gaiss",-1),a=[n];function r(_,i){return s(),e("main",null,a)}const m=o(c,[["render",r]]);export{m as default};
