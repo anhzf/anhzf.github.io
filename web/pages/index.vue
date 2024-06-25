@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import { parse } from 'valibot';
+import { ProjectSchema } from '~/schemas/project';
+
+const { data: projects, suspense } = useProjects();
+
+await suspense();
+</script>
+
 <template>
   <main id="main" class="relative flex flex-col items-center">
     <BigHero />
@@ -10,11 +19,10 @@
     <section id="projects" class="p-8 flex flex-col items-center gap-8">
       <h2 class="hidden">Pinned Projects</h2>
 
-      <ContentList path="/projects" v-slot="{ list: projects }">
-        <template v-if="projects">
-          <CardProject v-for="project in projects" :key="project?.title" v-bind="project" />
-        </template>
-      </ContentList>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <CardProject v-for="project in projects.map(el => parse(ProjectSchema, el))" :key="project?.title"
+          v-bind="project" />
+      </div>
 
       <a title="See more on GitHub" href="https://github.com/anhzf" target="_blank"
         class="group font-medium text-blue-gray-400 flex items-center gap-1">

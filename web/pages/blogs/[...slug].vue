@@ -4,36 +4,36 @@ const { share } = useShare();
 const onShareClick = () => {
   share({
     url: shareUrl.value,
-  })
-}
+  });
+};
 
 useHead({
   titleTemplate: '%s — anhzf blogs',
-})
+});
 </script>
 
 <template>
-  <main class="flex flex-col gap-4 m-2 md:m-8 lg:m-16">
-    <content-doc v-slot="{ doc }">
+  <main class="flex flex-col gap-4 m-2 md:m-8 lg:mx-32 lg:my-16">
+    <ContentDoc v-slot="{ doc }">
       <div class="w-full max-w-prose prose prose-slate text-xl bg-white py-4 shadow">
         <!-- Breadcrumbs -->
         <div
           class="text-base flex items-center flex-wrap gap-x-2 mb-8 px-4 md:px-8 [&>a]:(text-sm text-slate-300 no-underline) [&>a:hover]:(underline)">
-          <nuxt-link :to="{ name: 'index' }">
+          <NuxtLink :to="{ name: 'index' }">
             anhzf.dev
-          </nuxt-link>
+          </NuxtLink>
 
           <div class="i-eva:chevron-right-outline text-gray-400"></div>
 
-          <nuxt-link :to="{ name: 'blogs' }">
+          <NuxtLink :to="{ name: 'blogs' }">
             blogs
-          </nuxt-link>
+          </NuxtLink>
 
           <div class="i-eva:chevron-right-outline text-gray-400"></div>
 
-          <nuxt-link :to="doc._path" class="!text-slate-500">
+          <NuxtLink :to="doc._path" class="!text-slate-500">
             {{ doc.title }}
-          </nuxt-link>
+          </NuxtLink>
         </div>
 
         <!-- Header. Title, Cover -->
@@ -50,15 +50,15 @@ useHead({
         <section class="px-4 md:px-8 text-base">
           <span class="text-slate-500">Table of Contents</span>
           <ul class="m-0">
-            <li v-for="link of doc.body.toc.links" :key="link.id"
+            <li v-for="link of doc.body?.toc?.links" :key="link.id"
               :class="{ 'toc2': link.depth === 2, 'toc3': link.depth === 3 }">
-              <nuxt-link :to="`#${link.id}`">{{ link.text }}</nuxt-link>
+              <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
             </li>
           </ul>
           <hr class="divider">
         </section>
 
-        <content-renderer :value="doc" class="text-base [&>pre]:bg-slate-900 px-4 md:px-8" />
+        <ContentRenderer :value="doc" class="text-base [&>pre]:bg-slate-900 px-4 md:px-8" />
 
         <!-- Actions -->
         <section class="flex flex-col px-4 md:px-8 py-4">
@@ -75,9 +75,9 @@ useHead({
         </section>
       </div>
 
-      <grid-blog title="Related Blogs" title-as="h2"
-        :query="{ limit: 5, where: { _id: { $ne: doc._id }, tags: { $containsAny: doc.tags } } }" class="px-0" />
-    </content-doc>
+      <GridBlog title="Related Blogs" title-as="h2"
+        :query="{ limit: 5, where: [{ _id: { $ne: doc._id }, tags: { $containsAny: doc.tags } }] }" class="px-0" />
+    </ContentDoc>
   </main>
 </template>
 

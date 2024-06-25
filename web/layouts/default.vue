@@ -7,21 +7,21 @@ const isMobile = import.meta.env.SSR
 <template>
   <div class="min-h-100vh flex flex-col">
     <nav>
-      <mega-menu />
+      <MegaMenu />
     </nav>
 
     <div class="grow">
       <slot />
     </div>
 
-    <client-only>
-      <blob />
-    </client-only>
+    <ClientOnly>
+      <Blob />
+    </ClientOnly>
 
     <footer class="p-8 bg-purple-400 flex flex-col-reverse md:flex-row justify-between items-center">
-      <nuxt-link :to="{ name: 'index' }" class="hover:underline text-purple-50 flex items-center">
+      <NuxtLink :to="{ name: 'index' }" class="hover:underline text-purple-50 flex items-center">
         anhzf.dev
-      </nuxt-link>
+      </NuxtLink>
 
       <span class="text-blue-50 text-center">
         Copyright © 2022 All rights reserved
@@ -30,7 +30,7 @@ const isMobile = import.meta.env.SSR
       <div class="text-sm" />
     </footer>
 
-    <cursor-follower v-if="!isMobile" />
+    <CursorFollower v-if="!isMobile" />
   </div>
 </template>
 

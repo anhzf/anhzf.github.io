@@ -1,10 +1,8 @@
 <script lang="ts" setup>
-import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types';
-import { PropType } from 'vue';
+import type { QueryBuilderParams } from '@nuxt/content';
 
 const DEFAULT_QUERY: QueryBuilderParams = {
   sort: [{ 'title': 1 }],
-
 };
 
 defineProps({
@@ -36,9 +34,9 @@ defineProps({
   <component :is="as" class="container p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
     <component v-if="title" :is="titleAs" class="text-3xl font-bold md:col-span-2 lg:col-span-4">{{ title }}</component>
 
-    <content-list path="/blogs" :query="{ ...DEFAULT_QUERY, ...query }">
+    <ContentList path="/blogs" :query="{ ...DEFAULT_QUERY, ...query }">
       <template v-slot="{ list }">
-        <card-blog v-for="el in list" :key="el._path" :path="el._path" :title="el.title" :cover-src="el.image"
+        <CardBlog v-for="el in list" :key="el._path" :path="el._path!" :title="el.title!" :cover-src="el.image"
           :description="el.description" />
       </template>
 
@@ -46,12 +44,12 @@ defineProps({
         <p class="text-slate-500 md:col-span-2 lg:col-span-4">No blogs found.</p>
       </template>
 
-    </content-list>
+    </ContentList>
 
-    <nuxt-link v-if="showNavToAll" :to="{ name: 'blogs' }"
+    <NuxtLink v-if="showNavToAll" :to="{ name: 'blogs' }"
       class="group text-slate-700 hover:text-blue-500 font-medium flex gap-2 md:col-span-2 lg:col-span-4">
       <span>Lihat semua</span>
       <span class="group-hover:translate-x-1 transition-transform"> →</span>
-    </nuxt-link>
+    </NuxtLink>
   </component>
 </template>

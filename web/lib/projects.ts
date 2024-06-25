@@ -37,7 +37,7 @@ export const TECHNOLOGIES = {
   },
   vue: {
     title: 'Vue.js',
-    icon: '/assets/icons/vue.svg',
+    icon: 'https://vuejs.org/logo.svg',
     description: 'The Progressive JavaScript Framework',
     url: 'https://vuejs.org/',
   },

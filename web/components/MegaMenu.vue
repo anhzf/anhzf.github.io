@@ -1,3 +1,14 @@
+<script lang="ts" setup>
+const theMenu = ref(null);
+// auto open menu when screen is large
+const isLargeScreen = useMediaQuery('(min-width: 1280px)');
+const isOpen = ref(isLargeScreen.value);
+
+onClickOutside(theMenu, () => {
+  isOpen.value = false;
+});
+</script>
+
 <template>
   <div class="fixed z-50 top-0 right-0 ">
     <div class="m-6">
@@ -8,7 +19,7 @@
       </button>
     </div>
 
-    <transition class="absolute right-0 top-0 transition-transform duration-500" enter-from-class="translate-x-full"
+    <Transition class="absolute right-0 top-0 transition-transform duration-500" enter-from-class="translate-x-full"
       enter-to-class="translate-x-0" leave-active-class="translate-x-0" leave-to-class="translate-x-full">
       <nav v-if="isOpen" ref="theMenu"
         class="overflow-auto flex flex-col w-80 max-h-screen pb-32 bg-white shadow-xl shadow-indigo-400">
@@ -20,24 +31,10 @@
 
         <ul class="flex flex-col gap-y-2">
           <li class="flex">
-            <nuxt-link :to="{ name: 'about' }" class="menu-item">
-              <div class="i-eva:person-outline menu-item__icon" />
-              <span>About Me</span>
-            </nuxt-link>
-          </li>
-
-          <li class="flex">
-            <nuxt-link :to="{ name: 'links' }" class="menu-item">
-              <div class="i-eva:link-2-outline menu-item__icon" />
-              <span>Links</span>
-            </nuxt-link>
-          </li>
-
-          <li class="flex">
-            <nuxt-link :to="{ name: 'index', hash: '#projects' }" class="menu-item">
+            <NuxtLink :to="{ name: 'projects' }" class="menu-item">
               <div class="i-eva:bulb-outline menu-item__icon" />
               <span>Projects</span>
-            </nuxt-link>
+            </NuxtLink>
           </li>
 
           <li class="flex">
@@ -49,34 +46,30 @@
           </li>
 
           <li class="flex">
-            <nuxt-link :href="{ name: 'blogs' }" class="menu-item">
+            <NuxtLink :href="{ name: 'blogs' }" class="menu-item">
               <div class="i-eva:book-open-outline menu-item__icon" />
               <span>Blogs</span>
-            </nuxt-link>
+            </NuxtLink>
+          </li>
+
+          <li class="flex">
+            <NuxtLink :to="{ name: 'links' }" class="menu-item">
+              <div class="i-eva:link-2-outline menu-item__icon" />
+              <span>Links</span>
+            </NuxtLink>
           </li>
 
           <li class="absolute bottom-6 inset-x-1/2 flex justify-center transform -translate-x-1/2">
-            <nuxt-link :to="{ name: 'index' }"
+            <NuxtLink :to="{ name: 'index' }"
               class="group p-4 bg-white hover:bg-slate-100 active:bg-slate-200 rounded-full border-2 border-blue-200">
               <div class="i-eva:home-outline w-8 h-8 text-slate-300 group-hover:text-blue-500" />
-            </nuxt-link>
+            </NuxtLink>
           </li>
         </ul>
       </nav>
-    </transition>
+    </Transition>
   </div>
 </template>
-
-<script lang="ts" setup>
-const theMenu = ref(null);
-// auto open menu when screen is large
-const isLargeScreen = useMediaQuery('(min-width: 1280px)');
-const isOpen = ref(isLargeScreen.value);
-
-onClickOutside(theMenu, () => {
-  isOpen.value = false;
-});
-</script>
 
 <style lang="sass" scoped>
 .menu-item

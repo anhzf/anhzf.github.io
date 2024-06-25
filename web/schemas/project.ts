@@ -3,10 +3,11 @@ import { TECHNOLOGY_NAMES } from '~/lib/projects';
 
 export const ProjectSchema = v.object({
   title: v.string(),
-  desc: v.optional(v.string()),
+  path: v.string(),
+  desc: v.nullish(v.string()),
   thumbnail: v.string(),
-  technologies: v.picklist(TECHNOLOGY_NAMES),
-  liveUrl: v.optional(v.string()),
-  demoUrl: v.optional(v.string()),
-  repositoryUrl: v.optional(v.string()),
+  technologies: v.nullish(v.array(v.picklist(TECHNOLOGY_NAMES)), []),
+  liveUrl: v.nullish(v.string()),
+  demoUrl: v.nullish(v.string()),
+  repositoryUrl: v.nullish(v.string()),
 });

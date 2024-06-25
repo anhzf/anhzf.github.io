@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-const data = await queryContent('/projects').without('body').find();
+const { data, suspense } = useProjects();
+
+await suspense();
 </script>
 
 <template>

@@ -1,26 +1,3 @@
-<template>
-  <header class="w-full h-[85vh] p-4 flex flex-col justify-center items-center gap-3">
-    <h1 class="font-black text-6xl text-center text-slate-900">
-      <nuxt-link :to="{ name: 'index' }">
-        anhzf.dev
-      </nuxt-link>
-    </h1>
-    <div class="flex bg-light-blue-400/50 font-medium text-xl text-center text-white items-center">
-      <span>Build high quality </span>
-      <transition-group tag="ul" enter-from-class="transition duration-700 transform opacity-30 translate-y-6"
-        enter-to-class="transition duration-700 transform opacity-100 translate-y-0"
-        leave-from-class="transition duration-700 transform opacity-100 translate-y-0"
-        leave-to-class="transition duration-700 transform opacity-30 -translate-y-6"
-        class="relative w-32 h-full inline-block overflow-hidden">
-        <li v-for="(el, i) in whatBuild" v-show="whatBuildActiveIndex === i" :key="el"
-          class="absolute inset-0 font-bold inline">
-          {{ el }}
-        </li>
-      </transition-group>
-    </div>
-  </header>
-</template>
-
 <script lang="ts" setup>
 const whatBuild = Object.freeze(['Web App', 'Mobile App']);
 const whatBuildActiveIndex = ref(0);
@@ -32,3 +9,26 @@ onMounted(() => {
   }, 5000);
 });
 </script>
+
+<template>
+  <header class="w-full h-[85vh] p-4 flex flex-col justify-center items-center gap-3">
+    <h1 class="font-black text-6xl text-center text-slate-900">
+      <NuxtLink :to="{ name: 'index' }">
+        anhzf.dev
+      </NuxtLink>
+    </h1>
+    <div class="flex bg-light-blue-400/50 font-medium text-xl text-center text-white items-center">
+      <span>Build high quality </span>
+      <TransitionGroup tag="ul" enter-from-class="transition duration-700 transform opacity-30 translate-y-6"
+        enter-to-class="transition duration-700 transform opacity-100 translate-y-0"
+        leave-from-class="transition duration-700 transform opacity-100 translate-y-0"
+        leave-to-class="transition duration-700 transform opacity-30 -translate-y-6"
+        class="relative w-32 h-full inline-block overflow-hidden">
+        <li v-for="(el, i) in whatBuild" v-show="whatBuildActiveIndex === i" :key="el"
+          class="absolute inset-0 font-bold inline">
+          {{ el }}
+        </li>
+      </TransitionGroup>
+    </div>
+  </header>
+</template>
