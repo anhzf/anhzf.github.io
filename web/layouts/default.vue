@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import '@/assets/portofolio.scss';
-
 const isMobile = import.meta.env.SSR
   ? false
   : /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -35,3 +33,7 @@ const isMobile = import.meta.env.SSR
     <cursor-follower v-if="!isMobile" />
   </div>
 </template>
+
+<style lang="scss">
+@import '@/assets/portofolio.scss';
+</style>
