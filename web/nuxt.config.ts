@@ -62,13 +62,8 @@ export default defineNuxtConfig({
       isCustomElement: tag => IGNORED_CUSTOM_ELEMENTS.includes(tag),
     }
   },
-  modules: [
-    '@nuxthq/studio',
-    '@nuxt/content',
-    '@vueuse/nuxt',
-    '@unocss/nuxt',
-    // '@nuxt/image-edge'
-  ],
+  modules: ['@nuxthq/studio', '@nuxt/content', '@vueuse/nuxt', // '@nuxt/image-edge'
+    '@unocss/nuxt', "@nuxt/image"],
   unocss: {
     presets: [
       presetUno(),

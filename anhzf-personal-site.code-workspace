@@ -8,5 +8,10 @@
       "name": "🌐 web",
       "path": "./web",
     },
-  ]
+  ],
+  "settings": {
+    "unocss.root": [
+      "./web"
+    ]
+  }
 }
