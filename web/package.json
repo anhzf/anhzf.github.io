@@ -13,6 +13,7 @@
     "@nuxt/image": "^1.7.0",
     "@nuxthq/studio": "^2.0.1",
     "@tanstack/vue-query": "^5.47.0",
+    "@tanstack/vue-query-devtools": "^5.48.0",
     "@types/animejs": "^3.1.12",
     "@unocss/nuxt": "^0.61.0",
     "@unocss/reset": "^0.61.0",
