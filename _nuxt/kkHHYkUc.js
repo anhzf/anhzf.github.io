@@ -1,0 +1,1 @@
+import{_ as e}from"./DlAUqK2U.js";import{g as o,f as s,h as t}from"./UanrUq0C.js";const n={},c=t("h1",null,"Kosong jg gaiss",-1),a=[c];function r(_,f){return s(),o("main",null,a)}const m=e(n,[["render",r]]);export{m as default};
