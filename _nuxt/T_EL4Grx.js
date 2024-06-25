@@ -1,0 +1,1 @@
+import{u as n}from"./DQXpZMUz.js";import{a as o,H as r,f as p,g as c,t as _,G as i}from"./BWusszZr.js";import"./BUeLEQvD.js";import"./RXN3xqgT.js";const g=o({__name:"index",async setup(m){let e,t;const{data:s,suspense:a}=n();return[e,t]=r(()=>a()),await e,t(),(u,l)=>(p(),c("pre",null,_(i(s)),1))}});export{g as default};
