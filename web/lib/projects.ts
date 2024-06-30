@@ -53,6 +53,18 @@ export const TECHNOLOGIES = {
     description: 'Open-Source Data Platform',
     url: 'https://directus.io/',
   },
+  capacitor: {
+    title: 'Capacitor',
+    icon: 'https://capacitorjs.com/apple-icon-180x180.png',
+    description: 'Build cross-platform Native Progressive Web Apps for iOS, Android, and the Web with web technology',
+    url: 'https://capacitorjs.com/',
+  },
+  unocss: {
+    title: 'UnoCSS',
+    icon: 'https://unocss.dev/favicon.svg',
+    description: 'UnoCSS is the instant atomic CSS engine, that is designed to be flexible and extensible. The core is un-opinionated and all the CSS utilities are provided via presets.',
+    url: 'https://unocss.dev/',
+  },
 };
 
 export const TECHNOLOGY_NAMES = Object.keys(TECHNOLOGIES) as (keyof typeof TECHNOLOGIES)[];
