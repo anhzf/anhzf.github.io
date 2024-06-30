@@ -1,12 +1,6 @@
 <script lang="ts" setup>
-const theMenu = ref(null);
-// auto open menu when screen is large
-const isLargeScreen = useMediaQuery('(min-width: 1280px)');
-const isOpen = ref(isLargeScreen.value);
-
-onClickOutside(theMenu, () => {
-  isOpen.value = false;
-});
+const menuRef = ref(null);
+const isOpen = ref(false);
 </script>
 
 <template>
@@ -21,7 +15,7 @@ onClickOutside(theMenu, () => {
 
     <Transition class="absolute right-0 top-0 transition-transform duration-500" enter-from-class="translate-x-full"
       enter-to-class="translate-x-0" leave-active-class="translate-x-0" leave-to-class="translate-x-full">
-      <nav v-if="isOpen" ref="theMenu"
+      <nav v-if="isOpen" ref="menuRef"
         class="overflow-auto flex flex-col w-80 max-h-screen pb-32 bg-white shadow-xl shadow-indigo-400">
         <div class="self-end p-6">
           <button class="flex p-2 hover:bg-rose-100 justify-center items-center rounded-full" @click="isOpen = !isOpen">
