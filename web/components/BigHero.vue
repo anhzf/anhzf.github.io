@@ -17,13 +17,14 @@ onMounted(() => {
         anhzf.dev
       </NuxtLink>
     </h1>
-    <div class="flex bg-light-blue-400/50 font-medium text-xl text-center text-white items-center">
-      <span>Build high quality </span>
+    <div
+      class="flex items-center flex-no-wrap bg-light-blue-400/50 font-medium text-xl text-center text-white overflow-hidden">
+      <span class="shrink-0 pl-2">Transform your idea into a</span>
       <TransitionGroup tag="ul" enter-from-class="transition duration-700 transform opacity-30 translate-y-6"
         enter-to-class="transition duration-700 transform opacity-100 translate-y-0"
         leave-from-class="transition duration-700 transform opacity-100 translate-y-0"
         leave-to-class="transition duration-700 transform opacity-30 -translate-y-6"
-        class="relative w-32 h-full inline-block overflow-hidden">
+        class="relative w-10ch h-full inline-block overflow-hidden mx-1">
         <li v-for="(el, i) in whatBuild" v-show="whatBuildActiveIndex === i" :key="el"
           class="absolute inset-0 font-bold inline">
           {{ el }}
