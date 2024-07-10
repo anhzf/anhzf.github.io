@@ -11,6 +11,7 @@ const onNuxtPageMounted = () => {
 };
 
 nuxtApp.hook('page:finish', () => {
+  console.log('[page:finish]')
   scroll?.update();
 });
 
@@ -30,11 +31,11 @@ async function initializeScroll() {
 
 if (import.meta.hot) {
   import.meta.hot.on('vite:afterUpdate', ({ type, updates }) => {
+    console.log(updates);
     if (type === 'update'
       && updates.some((update) => update.acceptedPath === '/app.vue'
         // if there are updates to pages
         || /^\/pages\/.+\.vue$/.test(update.acceptedPath))) {
-      console.log('updating scroll...');
       (scroll ?? import.meta.hot?.data.scroll).update();
     }
   });

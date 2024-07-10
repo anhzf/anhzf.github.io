@@ -46,8 +46,7 @@ withDefaults(defineProps<Props>(), {
         <div v-if="technologies.length"
           class="px-1 py-0.5 border-[0.2px] border-slate-100 rounded-full flex items-center gap-1">
           <img v-for="(stack, i) in technologies" :key="i" :src="TECHNOLOGIES[stack].icon ?? stack" :alt="stack"
-            :title="TECHNOLOGIES[stack].title ?? stack" :width="16" format="webp"
-            class="w-3.5 h-3.5 p-[0.04rem] object-scale-down" />
+            :title="TECHNOLOGIES[stack].title ?? stack" :width="16" class="w-3.5 h-3.5 p-[0.04rem] object-scale-down" />
         </div>
       </div>
     </div>

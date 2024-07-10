@@ -10,7 +10,7 @@ const isMobile = import.meta.env.SSR
       <MegaMenu />
     </nav>
 
-    <div class="grow">
+    <div class="grow min-h-screen">
       <slot />
     </div>
 
@@ -25,7 +25,7 @@ const isMobile = import.meta.env.SSR
       </NuxtLink>
 
       <span class="text-blue-50 text-center">
-        Copyright © 2022 All rights reserved
+        Copyright © 2024 All rights reserved
       </span>
 
       <div class="text-sm" />
