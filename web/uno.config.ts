@@ -9,7 +9,7 @@ export default defineConfig({
     presetTypography(),
     presetWebFonts({
       fonts: {
-        sans: 'Inter:400,500,600,700,800,900',
+        sans: 'Inter Tight:400,500,600,700,800,900',
         serif: 'Cabin:400'
       },
     }),
