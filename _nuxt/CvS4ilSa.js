@@ -1,1 +1,0 @@
-import{u as t}from"./8QCjgnWk.js";import{a as s,f as o,g as a,h as r,t as n,G as c}from"./C1Frrogm.js";import"./CXM_vHT5.js";import"./CBWwvYR3.js";const p={"data-scroll-section":""},x=s({__name:"index",setup(i){const{data:e,suspense:m}=t();return(_,l)=>(o(),a("div",p,[r("pre",null,n(c(e)),1)]))}});export{x as default};
