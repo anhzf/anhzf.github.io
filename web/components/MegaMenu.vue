@@ -1,6 +1,12 @@
 <script lang="ts" setup>
+const router = useRouter();
+
 const menuRef = ref(null);
 const isOpen = ref(false);
+
+router.afterEach(() => {
+  isOpen.value = false;
+});
 </script>
 
 <template>
