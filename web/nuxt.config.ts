@@ -7,9 +7,14 @@ export default defineNuxtConfig({
     enabled: true,
   },
   runtimeConfig: {
-    googleAdClient: process.env.GOOGLE_AD_CLIENT,
+    public: {
+      googleAdClient: process.env.GOOGLE_AD_CLIENT,
+    },
   },
   app: {
+    rootAttrs: {
+      'data-scroll-container': '',
+    },
     head: {
       title: 'anhzf Personal Website',
       htmlAttrs: {
@@ -50,7 +55,7 @@ export default defineNuxtConfig({
   },
   css: [
     '@unocss/reset/tailwind.css',
-    '~/assets/global.scss'
+    '~/assets/global.scss',
   ],
   vue: {
     compilerOptions: {

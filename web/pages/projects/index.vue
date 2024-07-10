@@ -1,9 +1,13 @@
 <script lang="ts" setup>
 const { data, suspense } = useProjects();
 
-await suspense();
+onServerPrefetch(async () => {
+  await suspense();
+});
 </script>
 
 <template>
-  <pre>{{ data }}</pre>
+  <div data-scroll-section>
+    <pre>{{ data }}</pre>
+  </div>
 </template>

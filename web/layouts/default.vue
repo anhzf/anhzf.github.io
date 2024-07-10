@@ -18,7 +18,8 @@ const isMobile = import.meta.env.SSR
       <Blob />
     </ClientOnly>
 
-    <footer class="p-8 bg-purple-400 flex flex-col-reverse md:flex-row justify-between items-center">
+    <footer data-scroll-section
+      class="p-8 bg-purple-400 flex flex-col-reverse md:flex-row justify-between items-center">
       <NuxtLink :to="{ name: 'index' }" class="hover:underline text-purple-50 flex items-center">
         anhzf.dev
       </NuxtLink>
