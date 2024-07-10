@@ -42,7 +42,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="fixed -z-10 top-0 left-0 w-full h-screen">
+  <div class="fixed -z-10 top-0 left-0 w-full h-screen overflow-hidden">
     <div class="relative top-1/2 left-1/2 transform -translate-y-10">
       <div class="blob__container absolute transform">
         <div
