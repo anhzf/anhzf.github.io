@@ -7,3 +7,7 @@
 body {
   --at-apply: overflow-y-scroll overflow-x-hidden scroll-smooth;
 }
+
+.overflowing {
+  --at-apply: w-screen max-w-screen-xl h-full self-center aspect-video;
+}
