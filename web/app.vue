@@ -2,30 +2,29 @@
 import { VueQueryDevtools } from '@tanstack/vue-query-devtools';
 import type LocomotiveScroll from 'locomotive-scroll';
 
-const nuxtApp = useNuxtApp();
+declare global {
+  var scrollFx: LocomotiveScroll;
+}
 
-let scroll: LocomotiveScroll;
+const route = useRoute();
+const nuxtApp = useNuxtApp();
 
 const onNuxtPageMounted = () => {
   initializeScroll();
 };
 
 nuxtApp.hook('page:finish', () => {
-  scroll?.update();
+  globalThis.scrollFx?.update();
+  globalThis.scrollFx?.scrollTo(route.hash || 0);
 });
 
 async function initializeScroll() {
-  console.log('initializing scroll fx...');
   const { default: LocomotiveScroll } = await import('locomotive-scroll');
 
-  scroll ??= import.meta.hot?.data.scroll ?? new LocomotiveScroll({
+  globalThis.scrollFx ??= new LocomotiveScroll({
     el: window.document.getElementById('__nuxt')!,
     smooth: true,
   });
-
-  if (import.meta.hot) {
-    import.meta.hot.data.scroll = scroll;
-  }
 }
 
 if (import.meta.hot) {
@@ -35,7 +34,7 @@ if (import.meta.hot) {
       && updates.some((update) => update.acceptedPath === '/app.vue'
         // if there are updates to pages
         || /^\/(pages)|(components)\/.+\.vue$/.test(update.acceptedPath))) {
-      (scroll ?? import.meta.hot?.data.scroll).update();
+      globalThis.scrollFx.update();
     }
   });
 }
