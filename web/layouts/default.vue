@@ -18,17 +18,19 @@ const isMobile = import.meta.env.SSR
       <Blob />
     </ClientOnly>
 
-    <footer data-scroll-section
-      class="p-8 bg-purple-400 flex flex-col-reverse md:flex-row justify-between items-center">
-      <NuxtLink :to="{ name: 'index' }" class="hover:underline text-purple-50 flex items-center">
-        anhzf.dev
-      </NuxtLink>
+    <footer data-scroll-section>
+      <div data-scroll data-scroll-speed="0.1" data-scroll-delay="0.05"
+        class="p-8 bg-purple-400 flex flex-col-reverse md:flex-row justify-between items-center">
+        <NuxtLink :to="{ name: 'index' }" class="hover:underline text-purple-50 flex items-center">
+          anhzf.dev
+        </NuxtLink>
 
-      <span class="text-blue-50 text-center">
-        Copyright © 2024 All rights reserved
-      </span>
+        <span class="text-blue-50 text-center">
+          Copyright © 2024 All rights reserved
+        </span>
 
-      <div class="text-sm" />
+        <div class="text-sm" />
+      </div>
     </footer>
 
     <CursorFollower v-if="!isMobile" />
