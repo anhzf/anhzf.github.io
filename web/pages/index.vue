@@ -11,7 +11,7 @@ onServerPrefetch(async () => {
 
 <template>
   <main id="main" class="flex flex-col items-center">
-    <BigHero data-scroll-section />
+    <BigHero />
 
     <div data-scroll-section class="flex flex-col">
       <div data-scroll data-scroll-speed="1"

@@ -1,7 +1,8 @@
 <template>
-  <a :href="url" class="group relative w-full flex flex-row-reverse justify-center items-center" target="_blank">
+  <a :href="url" class="group/cardLink relative w-full flex flex-row-reverse justify-center items-center"
+    target="_blank">
     <div
-      class="flex-shrink flex-grow relative mb-1 p-4 bg-purple-50 group-hover:bg-purple-100 group-active:bg-purple-200 rounded-r-xl shadow transition-colors duration-400">
+      class="flex-shrink flex-grow relative mb-1 p-4 bg-purple-50 group-hover/cardLink:bg-purple-100 group-active/cardLink:bg-purple-200 rounded-r-xl shadow transition-colors duration-400">
       <span class="font-semibold text-indigo-400">{{ label }}</span>
 
       <div class="absolute -bottom-2.5 right-6 flex items-center gap-x-1">
@@ -12,7 +13,7 @@
     </div>
 
     <div
-      class="flex-shrink-0 relative overflow-hidden w-28 h-28 bg-zinc-100 rounded-2xl shadow-lg group-hover:shadow-xl group-active:shadow-sm group-hover:scale-110 group-active:scale-90 transition-transform,box-shadow">
+      class="flex-shrink-0 relative overflow-hidden w-28 h-28 bg-zinc-100 rounded-2xl shadow-lg group-hover/cardLink:shadow-xl group-active/cardLink:shadow-sm group-hover/cardLink:scale-110 group-active/cardLink:scale-90 transition-transform,box-shadow">
       <img :src="thumbnailSrc" :alt="label" :width="200" format="webp" class="object-cover w-full h-full" />
     </div>
   </a>
