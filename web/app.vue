@@ -6,9 +6,17 @@ declare global {
   var scrollFx: LocomotiveScroll;
 }
 
+const route = useRoute();
+const nuxtApp = useNuxtApp();
+
 const onNuxtPageMounted = () => {
   initializeScroll();
 };
+
+nuxtApp.hook('page:finish', () => {
+  globalThis.scrollFx?.update();
+  globalThis.scrollFx?.scrollTo(route.hash || 0);
+});
 
 async function initializeScroll() {
   const { default: LocomotiveScroll } = await import('locomotive-scroll');
