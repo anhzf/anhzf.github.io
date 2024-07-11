@@ -4,7 +4,9 @@ import { TECHNOLOGIES } from '~/lib/projects';
 import { ProjectSchema } from '~/schemas/project';
 
 const route = useRoute();
-const { data: doc } = await useAsyncData('project', () => queryContent(route.path).findOne());
+const { data: doc } = await useAsyncData('project', () => queryContent(route.path).findOne(), {
+  watch: [() => route.path],
+});
 if (!doc.value) throw createError({ statusCode: 404 });
 
 const project = computed(() => parse(ProjectSchema, { ...doc.value, path: doc.value?._path }));
