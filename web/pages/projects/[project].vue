@@ -43,11 +43,11 @@ onMounted(() => {
   <main id="main" data-scroll-section class="max-w-prose text-2xl mx-auto flex flex-col gap-8 px-2 py-8">
     <div class="flex flex-col lg:flex-row justify-between items-center gap-4">
       <div class="grow flex flex-col gap-8">
-        <h1 class="text-4xl lg:text-5xl font-semibold whitespace-pre-line tracking-tight">
+        <h1 class="text-4xl lg:text-5xl text-slate-900 font-semibold whitespace-pre-line tracking-tight">
           {{ project.title }}
         </h1>
 
-        <p class="text-base lg:text-lg font-serif font-normal text-slate max-w-prose text-balance">
+        <p class="text-base lg:text-lg font-serif font-normal text-slate-500 max-w-prose text-balance">
           {{ project.description || 'No description provided' }}
         </p>
       </div>

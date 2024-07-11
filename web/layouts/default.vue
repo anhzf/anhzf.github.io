@@ -10,7 +10,7 @@ const isMobile = import.meta.env.SSR
       <MegaMenu />
     </nav>
 
-    <div class="grow min-h-screen">
+    <div class="grow min-h-screen pb-20vh">
       <slot />
     </div>
 
