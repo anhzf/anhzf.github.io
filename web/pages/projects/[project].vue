@@ -4,9 +4,8 @@ import { TECHNOLOGIES } from '~/lib/projects';
 import { ProjectSchema } from '~/schemas/project';
 
 const route = useRoute();
-const { data: doc } = await useAsyncData('project', () => queryContent(route.path).findOne(), {
-  watch: [() => route.path],
-});
+
+const { data: doc } = await useAsyncData(`project:${route.path}`, () => queryContent(route.path).findOne());
 if (!doc.value) throw createError({ statusCode: 404 });
 
 const project = computed(() => parse(ProjectSchema, { ...doc.value, path: doc.value?._path }));
@@ -30,6 +29,13 @@ const linkItems = computed<Record<string, {
     title: 'Repository is the source code of the project.'
   },
 }));
+
+const onContentBeforeUnmount = (vnode: VNode) => {
+  // Cleanup iframes
+  vnode.el?.querySelectorAll('iframe').forEach((elm: HTMLIFrameElement) => {
+    elm.src = 'about:blank';
+  });
+}
 
 useContentHead(doc.value);
 </script>
@@ -79,7 +85,8 @@ useContentHead(doc.value);
       </a>
     </div>
 
-    <ContentRenderer :value="doc!" class="prose text-base lg:text-lg min-h-50vh flex flex-col">
+    <ContentRenderer :value="doc!" class="prose text-base lg:text-lg min-h-50vh flex flex-col"
+      @vue:beforeUnmount="onContentBeforeUnmount">
       <template #empty>
         <i>No details content provided.</i>
       </template>
