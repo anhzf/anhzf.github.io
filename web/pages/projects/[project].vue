@@ -54,12 +54,12 @@ onMounted(() => {
 
       <div
         class="shrink-0 self-stretch lg:self-auto relative flex lg:flex-col lg:divide-y divide-blue-300 lg:*:border-l-2 lg:*:border-l-blue-300
-        lg:before:content-[''] before:absolute before:bottom-full before:h-10 before:w-2px before:bg-gradient-to-t before:from-blue-300
-        lg:after:content-[''] after:absolute after:top-full after:h-10 after:w-2px after:bg-gradient-to-b after:from-blue-300
-        *:relative before:*:absolute before:*:left-full before:*:top-full before:*:w-10 before:*:h-1px before:*:bg-gradient-to-r before:*:from-blue-300">
+        lg:before:content-[string:''] before:absolute before:bottom-full before:h-10 before:w-2px before:bg-gradient-to-t before:from-blue-300
+        lg:after:content-[string:''] after:absolute after:top-full after:h-10 after:w-2px after:bg-gradient-to-b after:from-blue-300
+        *:relative before:[&:not(:last-child)]:*:content-[string:''] before:*:absolute before:*:left-full before:*:top-full before:*:w-10 before:*:h-1px before:*:bg-gradient-to-r before:*:from-blue-300">
         <template v-for="({ url, icon, ...attrs }, label) in linkItems" :key="label">
           <a v-if="url" :href="url" target="_blank" rel="noopener noreferrer"
-            class="before:[&:not(:last-child)]:content-[''] grow text-base flex justify-center items-center gap-3 px-8 py-5 hover:bg-blue-300/20 active:bg-blue-500/20 text-blue-800/90 text-center font-semibold backdrop-blur-lg"
+            class="grow text-base flex justify-center items-center gap-3 px-8 py-5 hover:bg-blue-300/20 active:bg-blue-500/20 text-blue-800/90 text-center font-semibold backdrop-blur-lg"
             v-bind="attrs">
             <div class="w-6 h-6 text-blue-700/60" :class="[icon ?? 'i-eva:external-link-outline',]" />
             <span>{{ label }}</span>
