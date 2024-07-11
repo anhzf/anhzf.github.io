@@ -16,6 +16,7 @@ export const useProjects = () => {
     },
     initialData: [],
   });
+  const prefetch = () => states.suspense().then(() => true);
 
-  return states;
+  return Object.assign(states, { prefetch });
 };

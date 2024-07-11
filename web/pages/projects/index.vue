@@ -1,9 +1,7 @@
 <script lang="ts" setup>
-const { data, suspense } = useProjects();
+const { data, prefetch } = useProjects();
 
-onServerPrefetch(async () => {
-  await suspense();
-});
+await useAsyncData(prefetch);
 </script>
 
 <template>

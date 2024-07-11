@@ -2,11 +2,9 @@
 import { parse } from 'valibot';
 import { ProjectSchema } from '~/schemas/project';
 
-const { data: projects, suspense } = useProjects();
+const { data: projects, prefetch } = useProjects();
 
-onServerPrefetch(async () => {
-  await suspense();
-});
+await useAsyncData(prefetch);
 </script>
 
 <template>
