@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-import { VueQueryDevtools } from '@tanstack/vue-query-devtools';
-</script>
-
 <template>
   <div>
     <NuxtLayout>
@@ -11,7 +7,5 @@ import { VueQueryDevtools } from '@tanstack/vue-query-devtools';
     <teleport to="body">
       <amp-auto-ads type="adsense" :data-ad-client="$config.googleAdClient" />
     </teleport>
-
-    <VueQueryDevtools />
   </div>
 </template>

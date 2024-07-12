@@ -8,23 +8,23 @@ const route = useRoute();
 const { data: doc } = await useAsyncData(`project:${route.path}`, () => queryContent(route.path).findOne());
 if (!doc.value) throw createError({ statusCode: 404 });
 
-const project = computed(() => parse(ProjectSchema, { ...doc.value, path: doc.value?._path }));
+const project = parse(ProjectSchema, { ...doc.value, path: doc.value._path });
 
-const linkItems = computed<Record<string, {
+const linkItems: Record<string, {
   url?: string | null;
   icon?: string | null;
   [key: string]: any;
-}>>(() => ({
+}> = (({
   'View Live': {
-    url: project.value?.liveUrl,
+    url: project.liveUrl,
     title: 'Live is the real production site/deployment.'
   },
   'View Demo': {
-    url: project.value?.demoUrl,
+    url: project.demoUrl,
     title: 'Demo is the preview only site/deployment.'
   },
   'Repository': {
-    url: project.value?.repositoryUrl,
+    url: project.repositoryUrl,
     icon: 'i-eva:github-outline',
     title: 'Repository is the source code of the project.'
   },

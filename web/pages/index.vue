@@ -2,9 +2,15 @@
 import { parse } from 'valibot';
 import { ProjectSchema } from '~/schemas/project';
 
-const { data: projects, prefetch } = useProjects();
-
-await useAsyncData(prefetch);
+const { data: projects } = await useAsyncData('projects-pinned', async () => {
+  const result = await queryContent('/projects')
+    .only(['title', 'desc', 'thumbnail', 'technologies', 'liveUrl', 'demoUrl', 'repositoryUrl', '_path'])
+    .find();
+  return result.map(el => parse(ProjectSchema, {
+    ...el,
+    path: el._path,
+  }));
+}, { default: () => [] });
 </script>
 
 <template>
@@ -22,8 +28,8 @@ await useAsyncData(prefetch);
         <h2 class="hidden">Pinned Projects</h2>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-4">
-          <CardProject v-for="(project, i) in projects.map(el => parse(ProjectSchema, el))" :key="project?.title"
-            data-scroll data-scroll-repeat data-scroll-speed="3" data-scroll-offset="20%"
+          <CardProject v-for="(project, i) in projects" :key="project?.title" data-scroll data-scroll-repeat
+            data-scroll-speed="3" data-scroll-offset="20%"
             :data-scroll-delay="0.1 + Number((projects.length * 0.03 - 0.03 * i).toFixed(2))"
             class="opacity-0 [&.is-inview]:opacity-100 transition-shadow,opacity" v-bind="project" />
         </div>
