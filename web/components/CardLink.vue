@@ -14,7 +14,7 @@
 
     <div
       class="flex-shrink-0 relative overflow-hidden w-28 h-28 bg-zinc-100 rounded-2xl shadow-lg group-hover/cardLink:shadow-xl group-active/cardLink:shadow-sm group-hover/cardLink:scale-110 group-active/cardLink:scale-90 transition-transform,box-shadow">
-      <img :src="thumbnailSrc" :alt="label" :width="200" format="webp" class="object-cover w-full h-full" />
+      <NuxtImg :src="thumbnailSrc" :alt="label" :width="200" class="object-cover w-full h-full" />
     </div>
   </a>
 </template>

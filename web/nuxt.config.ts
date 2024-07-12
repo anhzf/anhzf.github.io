@@ -16,14 +16,14 @@ export default defineNuxtConfig({
       'data-scroll-container': '',
     },
     head: {
-      title: 'anhzf Personal Website',
+      title: 'Alwan Nuha Z.F. - A Developer Personal Site',
       htmlAttrs: {
         lang: 'en',
       },
       meta: [
         {
           name: 'description',
-          content: 'The Software Developer Site — Project, Blog, Portfolio, and Whatever I want to share 😁',
+          content: 'A Developer Personal Site — Projects, Blogs, and Whatever I want to share 😁',
         },
         {
           name: 'image',
@@ -51,7 +51,7 @@ export default defineNuxtConfig({
           'custom-element': 'amp-auto-ads',
         },
       ],
-    }
+    },
   },
   css: [
     '@unocss/reset/tailwind.css',
@@ -60,24 +60,24 @@ export default defineNuxtConfig({
   vue: {
     compilerOptions: {
       isCustomElement: tag => IGNORED_CUSTOM_ELEMENTS.includes(tag),
-    }
+    },
   },
   modules: [
     '@nuxthq/studio',
     '@nuxt/content',
     '@vueuse/nuxt',
     '@unocss/nuxt',
-    "@nuxt/image"
+    '@nuxt/image',
   ],
   content: {
     markdown: {
       toc: {
         depth: 3,
         searchDepth: 3,
-      }
+      },
     },
     highlight: {
       theme: 'monokai',
     }
   },
-})
+});

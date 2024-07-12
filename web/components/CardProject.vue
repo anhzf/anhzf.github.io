@@ -19,7 +19,8 @@ withDefaults(defineProps<Props>(), {
 <template>
   <article class="m-2 w-full max-w-xs bg-white rounded-2xl shadow shadow-blue-300 transition-shadow hover:(shadow-xl)">
     <div class="overflow-hidden h-44 rounded-t-[inherit]">
-      <img :src="thumbnail" :alt="title" :width="350" loading="lazy" class="object-cover w-full h-full" />
+      <NuxtImg :src="thumbnail" :alt="title" :width="350" loading="lazy" format="webp"
+        sizes="100vw sm:50vw lg:35vw 2xl:25vw" class="object-cover w-full h-full" />
     </div>
     <div class="px-5 py-4">
       <h3 class="font-bold text-indigo-400 line-clamp-1" :title="title">

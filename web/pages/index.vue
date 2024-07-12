@@ -4,6 +4,8 @@ import { ProjectSchema } from '~/schemas/project';
 
 const { data: projects } = await useAsyncData('projects-pinned', async () => {
   const result = await queryContent('/projects')
+    /* TODO: Implement only pinned projects */
+    // .where({ pinned: true })
     .only(['title', 'desc', 'thumbnail', 'technologies', 'liveUrl', 'demoUrl', 'repositoryUrl', '_path'])
     .find();
   return result.map(el => parse(ProjectSchema, {

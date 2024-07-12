@@ -17,11 +17,11 @@ const linkItems: Record<string, {
 }> = (({
   'View Live': {
     url: project.liveUrl,
-    title: 'Live is the real production site/deployment.'
+    title: 'Live view is the real production site/deployment.'
   },
   'View Demo': {
     url: project.demoUrl,
-    title: 'Demo is the preview only site/deployment.'
+    title: 'Demo view is the preview only site/deployment.'
   },
   'Repository': {
     url: project.repositoryUrl,
@@ -59,7 +59,7 @@ useContentHead(doc.value);
         lg:after:content-[quoted:_] after:absolute after:top-full after:right-full after:h-10 after:w-2px after:bg-gradient-to-b after:from-blue-300
         *:relative lg:before:*:content-[quoted:_] before:last:*:content-none before:*:absolute before:*:left-full before:*:top-full before:*:w-10 before:*:h-1px before:*:bg-gradient-to-r before:*:from-blue-300">
         <template v-for="({ url, icon, ...attrs }, label) in linkItems" :key="label">
-          <a v-if="url" :href="url" target="_blank" rel="noopener noreferrer"
+          <a v-if="url" :href="url" target="_blank" rel="me"
             class="grow text-base flex justify-center items-center gap-3 px-8 py-5 hover:bg-blue-300/20 active:bg-blue-500/20 text-blue-800/90 text-center font-semibold backdrop-blur-lg"
             v-bind="attrs">
             <div class="w-6 h-6 text-blue-700/60" :class="[icon ?? 'i-eva:external-link-outline',]" />
@@ -71,7 +71,8 @@ useContentHead(doc.value);
 
     <div data-scroll data-scroll-speed="1" data-scroll-delay="0.1"
       class="self-center w-screen max-w-screen relative flex flex-col">
-      <img :src="doc!.image ?? project.thumbnail" :alt="project.title" :width="800"
+      <NuxtImg :src="doc!.image ?? project.thumbnail" :alt="project.title" :width="800" format="webp"
+        sizes="100vw 2xl:90vw"
         class="w-screen max-w-screen-xl self-center mx-4 z-1 aspect-video bg-slate-300/20 backdrop-blur-lg object-cover rounded-lg shadow-xl shadow-blue/30" />
     </div>
 
