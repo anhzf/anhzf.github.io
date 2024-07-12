@@ -1,1 +1,0 @@
-import{q as e,g as o,f as s,h as t}from"./Bpq78z8M.js";const n={},c=t("h1",null,"Kosong jg gaiss",-1),a=[c];function r(_,l){return s(),o("main",null,a)}const i=e(n,[["render",r]]);export{i as default};
