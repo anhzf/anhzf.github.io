@@ -16,7 +16,11 @@ export default defineNuxtConfig({
       'data-scroll-container': '',
     },
     head: {
-      title: 'Alwan Nuha Z.F. - A Developer Personal Site',
+      titleTemplate: '%s %separator %siteName',
+      templateParams: {
+        siteName: 'Alwan Nuha ZF',
+        separator: ' | '
+      },
       htmlAttrs: {
         lang: 'en',
       },
@@ -78,6 +82,6 @@ export default defineNuxtConfig({
     },
     highlight: {
       theme: 'monokai',
-    }
+    },
   },
 });

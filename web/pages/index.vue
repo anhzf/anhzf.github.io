@@ -13,6 +13,10 @@ const { data: projects } = await useAsyncData('projects-pinned', async () => {
     path: el._path,
   }));
 }, { default: () => [] });
+
+useHead({
+  title: 'A Developer Personal Site',
+});
 </script>
 
 <template>
