@@ -1,14 +1,12 @@
 import LocomotiveScroll from 'locomotive-scroll';
 
-export default defineNuxtPlugin(async ({ vueApp, hook, _route }) => {
+export default defineNuxtPlugin(async ({ hook, _route }) => {
   const scrollFx = await initializeScroll();
+  if (import.meta.dev === true) {
+    (globalThis as any).scrollFx = scrollFx;
+  }
 
-  vueApp.$nuxt.$router.afterEach((to) => {
-    scrollFx.update();
-    scrollFx.scrollTo(to.hash || 0);
-  });
-
-  hook('page:finish', () => {
+  hook('page:loading:end', () => {
     scrollFx.update();
     scrollFx.scrollTo(_route.hash || 0);
   });
@@ -27,5 +25,4 @@ export default defineNuxtPlugin(async ({ vueApp, hook, _route }) => {
       }
     });
   }
-
 });
