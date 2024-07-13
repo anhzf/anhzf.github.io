@@ -3,6 +3,13 @@ const IGNORED_CUSTOM_ELEMENTS = Object.freeze([
 ]);
 
 export default defineNuxtConfig({
+  nitro: {
+    prerender: {
+      // workaround for https://github.com/nuxt/content/issues/2688
+      routes: ['/'],
+    },
+  },
+
   devtools: {
     enabled: true,
   },
