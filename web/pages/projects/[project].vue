@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { ParsedContent } from '@nuxt/content';
 import { parse } from 'valibot';
 import { TECHNOLOGIES } from '~/lib/projects';
 import { ProjectSchema } from '~/schemas/project';
@@ -9,6 +10,8 @@ const { data: doc } = await useAsyncData(`project:${route.path}`, () => queryCon
 if (!doc.value) throw createError({ statusCode: 404 });
 
 const project = parse(ProjectSchema, { ...doc.value, path: doc.value._path });
+
+const coverSrc = project.cover ?? project.thumbnail ?? project.image ?? `https://placehold.co/800x450?text=${encodeURIComponent(project.title)}`;
 
 const linkItems: Record<string, {
   url?: string | null;
@@ -32,12 +35,12 @@ const linkItems: Record<string, {
 
 const onContentBeforeUnmount = (vnode: VNode) => {
   // Cleanup iframes
-  vnode.el?.querySelectorAll('iframe').forEach((elm: HTMLIFrameElement) => {
+  vnode.el?.querySelectorAll?.('iframe').forEach((elm: HTMLIFrameElement) => {
     elm.src = 'about:blank';
   });
 }
 
-useContentHead(doc.value);
+useContentHead(doc as Ref<ParsedContent>);
 </script>
 
 <template>
@@ -71,8 +74,7 @@ useContentHead(doc.value);
 
     <div data-scroll data-scroll-speed="1" data-scroll-delay="0.1"
       class="self-center w-screen max-w-screen relative flex flex-col">
-      <NuxtImg :src="doc!.image ?? project.thumbnail" :alt="project.title" :width="800" format="webp"
-        sizes="100vw 2xl:90vw"
+      <NuxtImg :src="coverSrc" :alt="project.title" :width="800" format="webp" sizes="100vw 2xl:90vw"
         class="w-screen max-w-screen-xl self-center mx-4 z-1 aspect-video bg-slate-300/20 backdrop-blur-lg object-cover rounded-lg shadow-xl shadow-blue/30" />
     </div>
 
@@ -86,7 +88,8 @@ useContentHead(doc.value);
       </a>
     </div>
 
-    <ContentRenderer :value="doc!" class="prose text-base lg:text-lg min-h-50vh flex flex-col"
+    <ContentRenderer :value="doc!"
+      class="prose prose-slate text-base lg:text-lg min-h-50vh flex flex-col [&_img]:bg-slate-100"
       @vue:beforeUnmount="onContentBeforeUnmount">
       <template #empty>
         <i>No details content provided.</i>

@@ -10,8 +10,9 @@ export default defineConfig({
     presetWebFonts({
       fonts: {
         sans: 'Inter Tight:400,500,600,700,800,900',
-        serif: 'Cabin:400'
+        serif: 'Cabin:400',
       },
+      timeouts: false,
     }),
   ],
   transformers: [

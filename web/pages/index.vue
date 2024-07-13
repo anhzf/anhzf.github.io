@@ -6,7 +6,7 @@ const { data: projects } = await useAsyncData('projects-pinned', async () => {
   const result = await queryContent('/projects')
     /* TODO: Implement only pinned projects */
     // .where({ pinned: true })
-    .only(['title', 'desc', 'thumbnail', 'technologies', 'liveUrl', 'demoUrl', 'repositoryUrl', '_path'])
+    .only(['title', 'desc', 'cover', 'thumbnail', 'technologies', 'liveUrl', 'demoUrl', 'repositoryUrl', '_path'])
     .find();
   return result.map(el => parse(ProjectSchema, {
     ...el,
@@ -37,7 +37,7 @@ useHead({
           <CardProject v-for="(project, i) in projects" :key="project?.title" data-scroll data-scroll-repeat
             data-scroll-speed="3" data-scroll-offset="20%"
             :data-scroll-delay="0.1 + Number((projects.length * 0.03 - 0.03 * i).toFixed(2))"
-            class="opacity-0 [&.is-inview]:opacity-100 transition-shadow,opacity" v-bind="project" />
+            class="opacity-0 [&.is-inview]:opacity-100 transition-shadow,opacity" :data="project" />
         </div>
 
         <a title="See more on GitHub" href="https://github.com/anhzf" target="_blank"

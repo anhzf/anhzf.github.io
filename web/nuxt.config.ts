@@ -6,11 +6,13 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
+
   runtimeConfig: {
     public: {
       googleAdClient: process.env.GOOGLE_AD_CLIENT,
     },
   },
+
   app: {
     rootAttrs: {
       'data-scroll-container': '',
@@ -57,15 +59,18 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   css: [
     '@unocss/reset/tailwind.css',
     '~/assets/global.scss',
   ],
+
   vue: {
     compilerOptions: {
       isCustomElement: tag => IGNORED_CUSTOM_ELEMENTS.includes(tag),
     },
   },
+
   modules: [
     '@nuxthq/studio',
     '@nuxt/content',
@@ -73,6 +78,7 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@nuxt/image',
   ],
+
   content: {
     markdown: {
       toc: {
@@ -84,4 +90,6 @@ export default defineNuxtConfig({
       theme: 'monokai',
     },
   },
+
+  compatibilityDate: '2024-07-13'
 });

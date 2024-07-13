@@ -65,6 +65,12 @@ export const TECHNOLOGIES = {
     description: 'UnoCSS is the instant atomic CSS engine, that is designed to be flexible and extensible. The core is un-opinionated and all the CSS utilities are provided via presets.',
     url: 'https://unocss.dev/',
   },
+  'gh-actions': {
+    title: 'GitHub Actions',
+    icon: 'https://github.githubassets.com/assets/actions-icon-actions-61925a4b8822.svg',
+    description: 'Automate your workflow from idea to production',
+    url: 'https://github.com/features/actions',
+  },
 };
 
 export const TECHNOLOGY_NAMES = Object.keys(TECHNOLOGIES) as (keyof typeof TECHNOLOGIES)[];
