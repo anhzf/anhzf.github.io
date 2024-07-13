@@ -13,4 +13,5 @@ export const ProjectSchema = v.objectWithRest({
   liveUrl: v.nullish(v.string()),
   demoUrl: v.nullish(v.string()),
   repositoryUrl: v.nullish(v.string()),
+  tags: v.nullish(v.array(v.string()), []),
 }, v.unknown());

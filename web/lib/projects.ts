@@ -71,6 +71,24 @@ export const TECHNOLOGIES = {
     description: 'Automate your workflow from idea to production',
     url: 'https://github.com/features/actions',
   },
+  pwa: {
+    title: 'Progressive Web App',
+    icon: 'https://raw.githubusercontent.com/webmaxru/progressive-web-apps-logo/master/pwalogo.svg',
+    description: 'Progressive Web Apps are user experiences that have the reach of the web, and are reliable, fast, and engaging.',
+    url: 'https://web.dev/progressive-web-apps/',
+  },
+  vuetify: {
+    title: 'Vuetify',
+    icon: 'https://cdn.vuetifyjs.com/docs/images/brand-kit/v-logo.svg',
+    description: 'Material Design Component Framework',
+    url: 'https://vuetifyjs.com/',
+  },
+  mui: {
+    title: 'Material-UI',
+    icon: 'https://mui.com/static/favicon.ico',
+    description: 'React components for faster and easier web development. Build your own design system, or start with Material Design.',
+    url: 'https://mui.com/',
+  },
 };
 
 export const TECHNOLOGY_NAMES = Object.keys(TECHNOLOGIES) as (keyof typeof TECHNOLOGIES)[];
