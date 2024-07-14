@@ -11,15 +11,17 @@ defineProps<Props>();
 </script>
 
 <template>
-  <article class="m-2 w-full max-w-xs bg-white rounded-2xl shadow shadow-blue-300 transition-shadow hover:(shadow-xl)">
-    <div class="overflow-hidden h-44 rounded-t-[inherit]">
-      <NuxtImg :src="data.thumbnail ?? data.cover ?? data.image ?? `https://placehold.co/350x200?text=${encodeURIComponent(data.title)}`"
+  <article
+    class="group flex flex-col w-full max-w-xs bg-white rounded-2xl shadow shadow-blue-300 transition-shadow hover:shadow-xl active:shadow-sm overflow-hidden">
+    <NuxtLink :to="data.path" class="h-44">
+      <NuxtImg
+        :src="data.thumbnail ?? data.cover ?? data.image ?? `https://placehold.co/350x200?text=${encodeURIComponent(data.title)}`"
         :alt="data.title" :width="350" loading="lazy" format="webp" sizes="100vw sm:50vw lg:35vw 2xl:25vw"
         class="object-cover w-full h-full" />
-    </div>
+    </NuxtLink>
     <div class="px-5 py-4">
       <h3 class="font-bold text-indigo-400 line-clamp-1" :title="data.title">
-        <NuxtLink :to="data.path" class="hover:underline">
+        <NuxtLink :to="data.path" class="group-hover:underline">
           {{ data.title }}
         </NuxtLink>
       </h3>
@@ -42,8 +44,7 @@ defineProps<Props>();
         <div v-if="data.technologies.length"
           class="px-1 py-0.5 border-[0.2px] border-slate-100 rounded-full flex items-center gap-1">
           <img v-for="(stack, i) in data.technologies" :key="i" :src="TECHNOLOGIES[stack]?.icon ?? stack" :alt="stack"
-            :title="TECHNOLOGIES[stack]?.title ?? stack" :width="16"
-            class="w-3.5 h-3.5 p-[0.04rem] object-scale-down" />
+            :title="TECHNOLOGIES[stack]?.title ?? stack" :width="16" class="w-3.5 h-3.5 p-[0.04rem] object-scale-down">
         </div>
       </div>
     </div>
