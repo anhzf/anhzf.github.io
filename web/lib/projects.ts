@@ -89,6 +89,12 @@ export const TECHNOLOGIES = {
     description: 'React components for faster and easier web development. Build your own design system, or start with Material Design.',
     url: 'https://mui.com/',
   },
+  contentful: {
+    title: 'Contentful',
+    icon: 'https://www.contentful.com/android-chrome-192x192.png',
+    description: 'Contentful is a content platform to create, manage and distribute content to any platform.',
+    url: 'https://www.contentful.com/',
+  },
 };
 
 export const TECHNOLOGY_NAMES = Object.keys(TECHNOLOGIES) as (keyof typeof TECHNOLOGIES)[];
