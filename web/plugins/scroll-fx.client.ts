@@ -8,19 +8,18 @@ export default defineNuxtPlugin(async ({ hook, _route }) => {
     });
   });
 
-  const scrollFx = await initializeScroll();
-  if (import.meta.dev === true) {
-    (globalThis as any).scrollFx = scrollFx;
-  }
+  let scrollFx: LocomotiveScroll;
 
   hook('page:loading:end', () => {
     suspenseFinished.then(() => {
+      scrollFx ??= initializeScroll();
+
       scrollFx.update();
       scrollFx.scrollTo(_route.hash || 0);
     });
   });
 
-  async function initializeScroll() {
+  function initializeScroll() {
     return new LocomotiveScroll({
       el: window.document.getElementById('__nuxt')!,
       smooth: true,
