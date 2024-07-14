@@ -6,7 +6,7 @@ const { data: projects } = await useAsyncData('projects-pinned', async () => {
   const result = await queryContent('/projects')
     /* TODO: Implement only pinned projects */
     // .where({ pinned: true })
-    .only(['title', 'desc', 'cover', 'thumbnail', 'technologies', 'liveUrl', 'demoUrl', 'repositoryUrl', '_path'])
+    .without(['body'])
     .find();
   return result.map(el => parse(ProjectSchema, {
     ...el,
@@ -33,11 +33,12 @@ useHead({
       <section id="projects" class="p-8 flex flex-col items-center gap-8">
         <h2 class="hidden">Pinned Projects</h2>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-4">
-          <CardProject v-for="(project, i) in projects" :key="project?.title" data-scroll data-scroll-repeat
-            data-scroll-speed="3" data-scroll-offset="20%"
-            :data-scroll-delay="0.1 + Number((projects.length * 0.03 - 0.03 * i).toFixed(2))"
-            class="opacity-0 [&.is-inview]:opacity-100 transition-shadow,opacity" :data="project" />
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-12 gap-y-4">
+          <div v-for="(project, i) in projects" :key="project.path" data-scroll data-scroll-repeat data-scroll-speed="3"
+            data-scroll-offset="20%" :data-scroll-delay="0.025 + Number((projects.length * 0.03 - 0.03 * i).toFixed(2))"
+            class="opacity-0 [&.is-inview]:opacity-100 transition-shadow,opacity">
+            <CardProject :data="project" />
+          </div>
         </div>
 
         <a title="See more on GitHub" href="https://github.com/anhzf" target="_blank"

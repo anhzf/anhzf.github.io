@@ -1,6 +1,7 @@
 import {
   defineConfig, presetIcons, presetTypography, presetUno, presetWebFonts, transformerDirectives, transformerVariantGroup,
 } from 'unocss';
+import { presetForms } from '@julr/unocss-preset-forms'
 
 export default defineConfig({
   presets: [
@@ -14,6 +15,7 @@ export default defineConfig({
       },
       timeouts: false,
     }),
+    presetForms(),
   ],
   transformers: [
     transformerDirectives(),
