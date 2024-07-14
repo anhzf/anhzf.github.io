@@ -58,8 +58,8 @@ useContentHead(doc as Ref<ParsedContent>);
 
       <div
         class="shrink-0 self-stretch lg:self-auto relative flex lg:flex-col lg:divide-y divide-blue-300 lg:border-l-2 border-l-blue-300
-        lg:before:content-[quoted:_] before:absolute before:bottom-full before:right-full before:h-10 before:w-2px before:bg-gradient-to-t before:from-blue-300
-        lg:after:content-[quoted:_] after:absolute after:top-full after:right-full after:h-10 after:w-2px after:bg-gradient-to-b after:from-blue-300
+        lg:before:content-[quoted:_] before:absolute before:bottom-full before:-left-1px before:h-10 before:w-2px before:bg-gradient-to-t before:from-blue-300
+        lg:after:content-[quoted:_] after:absolute after:top-full after:-left-1px after:h-10 after:w-2px after:bg-gradient-to-b after:from-blue-300
         *:relative lg:before:*:content-[quoted:_] before:last:*:content-none before:*:absolute before:*:left-full before:*:top-full before:*:w-10 before:*:h-1px before:*:bg-gradient-to-r before:*:from-blue-300">
         <template v-for="({ url, icon, ...attrs }, label) in linkItems" :key="label">
           <a v-if="url" :href="url" target="_blank" rel="me"
@@ -97,3 +97,20 @@ useContentHead(doc as Ref<ParsedContent>);
     </ContentRenderer>
   </main>
 </template>
+
+<style lang="scss">
+.prose {
+  a {
+    --at-apply: flex items-center gap-1 text-blue-500 hover:text-blue-600 decoration-dashed decoration-from-font hover:decoration-solid;
+
+    &::after {
+      content: '';
+      --at-apply: i-eva-link-outline inline-block size-0.8em align-middle ml-0.25em opacity-60 hover:opacity-100;
+    }
+
+    &[target=_blank]::after {
+      --at-apply: i-eva-external-link-outline;
+    }
+  }
+}
+</style>

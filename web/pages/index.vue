@@ -34,7 +34,7 @@ useHead({
         <h2 class="hidden">Pinned Projects</h2>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-12 gap-y-4">
-          <div v-for="(project, i) in projects" :key="project.path" data-scroll data-scroll-repeat data-scroll-speed="3"
+          <div v-for="(project, i) in projects" :key="project.path" data-scroll data-scroll-repeat data-scroll-speed="2"
             data-scroll-offset="20%" :data-scroll-delay="0.025 + Number((projects.length * 0.03 - 0.03 * i).toFixed(2))"
             class="opacity-0 [&.is-inview]:opacity-100 transition-shadow,opacity">
             <CardProject :data="project" />
