@@ -101,14 +101,14 @@ useContentHead(doc as Ref<ParsedContent>);
 <style lang="scss">
 .prose {
   a {
-    --at-apply: flex items-center gap-1 text-blue-500 hover:text-blue-600 decoration-dashed decoration-from-font hover:decoration-solid;
+    --at-apply: text-blue-500 hover:text-blue-600 decoration-dashed decoration-from-font hover:decoration-solid;
 
-    &::after {
+    &::before {
       content: '';
-      --at-apply: i-eva-link-outline inline-block size-0.8em align-middle ml-0.25em opacity-60 hover:opacity-100;
+      --at-apply: i-eva-link-outline inline-block size-0.8em align-middle ml-0.1em mr-0.2em opacity-60 hover:opacity-100;
     }
 
-    &[target=_blank]::after {
+    &[target=_blank]::before {
       --at-apply: i-eva-external-link-outline;
     }
   }
