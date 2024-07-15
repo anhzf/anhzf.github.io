@@ -6,6 +6,8 @@ const isMobile = import.meta.env.SSR
 
 <template>
   <div class="min-h-100vh flex flex-col">
+    <NuxtLoadingIndicator />
+
     <nav>
       <MegaMenu />
     </nav>
