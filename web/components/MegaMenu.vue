@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+const nuxtApp = useNuxtApp();
 const router = useRouter();
 
 const menuRef = ref(null);
@@ -6,8 +7,9 @@ const menuRef = ref(null);
 const isOpen = ref(true);
 const isMounted = ref(false);
 
-onMounted(() => {
+nuxtApp.hook('page:loading:end', () => {
   isMounted.value = true;
+  isOpen.value = false;
 });
 
 router.afterEach(async () => {
@@ -26,10 +28,10 @@ router.afterEach(async () => {
       </button>
     </div>
 
-    <Transition class="absolute right-0 top-0 transition-transform duration-500" enter-from-class="translate-x-full"
-      enter-to-class="translate-x-0" leave-active-class="translate-x-0" leave-to-class="translate-x-full">
+    <Transition enter-from-class="translate-x-full" enter-to-class="translate-x-0" leave-active-class="translate-x-0"
+      leave-to-class="translate-x-full">
       <nav v-if="isOpen" ref="menuRef"
-        class="overflow-auto flex flex-col w-80 max-h-screen pb-32 bg-white shadow-xl shadow-indigo-400">
+        class="overflow-auto flex flex-col w-80 max-h-screen pb-32 bg-white shadow-xl shadow-indigo-400 absolute right-0 top-0 transition-transform duration-500">
         <div class="self-end p-6">
           <button class="flex p-2 hover:bg-rose-100 justify-center items-center rounded-full" @click="isOpen = !isOpen">
             <div class="i-eva:close-outline cursor-pointer w-12 h-12 text-slate-900" />
