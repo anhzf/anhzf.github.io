@@ -2,9 +2,16 @@
 const router = useRouter();
 
 const menuRef = ref(null);
-const isOpen = ref(false);
+// Open by default for SSR
+const isOpen = ref(true);
+const isMounted = ref(false);
 
-router.afterEach(() => {
+onMounted(() => {
+  isMounted.value = true;
+});
+
+router.afterEach(async () => {
+  await until(isMounted).toBe(true);
   isOpen.value = false;
 });
 </script>
@@ -38,7 +45,7 @@ router.afterEach(() => {
           </li>
 
           <li class="flex">
-            <a href="https://drive.google.com/file/d/1BNocju57scUMHLoShoUltefS7NrmCsO1/view?usp=sharing" target="_blank"
+            <a href="https://drive.google.com/file/d/1jNNX_TJVDxBtupe9JUylaIEGHk0-e3zc/view?usp=sharing" target="_blank"
               class="menu-item">
               <div class="i-eva:attach-outline menu-item__icon" />
               <span>Resume</span>
