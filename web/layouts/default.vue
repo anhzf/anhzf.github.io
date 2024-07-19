@@ -31,7 +31,9 @@ const isMobile = import.meta.env.SSR
           Copyright © 2024 All rights reserved
         </span>
 
-        <div class="text-sm" />
+        <NuxtLink :to="{ name: 'about' }" class="text-sm hover:underline">
+          About me
+        </NuxtLink>
       </div>
     </footer>
 

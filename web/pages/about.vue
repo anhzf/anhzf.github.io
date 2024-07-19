@@ -21,14 +21,19 @@ const gifs = [
   },
 ];
 
-whenever(() => counter.value === gifs.length, () => {
+whenever(() => counter.value === (gifs.length - 1), () => {
   pause();
-});
+}, { once: true });
 </script>
 
 <template>
   <main>
     <h1>About</h1>
-    <img :src="gifs[counter].src" :alt="gifs[counter].alt" />
+    <TransitionGroup enter-from-class="opacity-0" enter-to-class="opacity-100" leave-from-class="opacity-100"
+      leave-to-class="opacity-0">
+      <template v-for="({ src, alt }, i) in gifs" :key="i">
+        <img v-if="counter === i" :src="src" :alt="alt" class="transition duration-500" />
+      </template>
+    </TransitionGroup>
   </main>
 </template>
