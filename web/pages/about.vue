@@ -30,7 +30,7 @@ whenever(() => counter.value === (gifs.length - 1), () => {
   <main>
     <h1>About</h1>
     <TransitionGroup enter-from-class="opacity-0" enter-to-class="opacity-100" leave-from-class="opacity-100"
-      leave-to-class="opacity-0">
+      leave-to-class="opacity-0" appear leave-active-class="absolute">
       <template v-for="({ src, alt }, i) in gifs" :key="i">
         <img v-if="counter === i" :src="src" :alt="alt" class="transition duration-500" />
       </template>
