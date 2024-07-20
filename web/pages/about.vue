@@ -27,7 +27,7 @@ whenever(() => counter.value === (gifs.length - 1), () => {
 </script>
 
 <template>
-  <main>
+  <main class="min-h-screen flex flex-col justify-center items-center">
     <h1>About</h1>
     <TransitionGroup enter-from-class="opacity-0" enter-to-class="opacity-100" leave-from-class="opacity-100"
       leave-to-class="opacity-0" appear leave-active-class="absolute">
