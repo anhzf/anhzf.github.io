@@ -1,0 +1,8 @@
+{
+  "id": "uWfgGKcRFn",
+  "head": {
+    "link": [],
+    "style": []
+  },
+  "html": "<article data-island-uid><a href=\"/blogs/2022-10-30-hosting-web-dengan-github-page\" class=\"flex flex-col px-4 py-3 hover:bg-blue-300/20 rounded-2xl active:rounded-3xl hover:ring-2 ring-blue-500 backdrop-blur-lg transition-background-color,border-radius\"><img onerror=\"this.setAttribute(&#39;data-error&#39;, 1)\" width=\"300\" alt=\"Gambar cover Cara Hosting Web dengan Github Page\" data-nuxt-img sizes=\"(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 35vw, 25vw\" srcset=\"/_ipx/w_1&amp;f_webp/assets/img/blogs/2022-10-30_hosting-web-ghpage_cover.png 1w, /_ipx/w_2&amp;f_webp/assets/img/blogs/2022-10-30_hosting-web-ghpage_cover.png 2w, /_ipx/w_320&amp;f_webp/assets/img/blogs/2022-10-30_hosting-web-ghpage_cover.png 320w, /_ipx/w_358&amp;f_webp/assets/img/blogs/2022-10-30_hosting-web-ghpage_cover.png 358w, /_ipx/w_384&amp;f_webp/assets/img/blogs/2022-10-30_hosting-web-ghpage_cover.png 384w, /_ipx/w_640&amp;f_webp/assets/img/blogs/2022-10-30_hosting-web-ghpage_cover.png 640w, /_ipx/w_716&amp;f_webp/assets/img/blogs/2022-10-30_hosting-web-ghpage_cover.png 716w, /_ipx/w_768&amp;f_webp/assets/img/blogs/2022-10-30_hosting-web-ghpage_cover.png 768w\" src=\"/_ipx/w_768&amp;f_webp/assets/img/blogs/2022-10-30_hosting-web-ghpage_cover.png\" class=\"mb-2 aspect-16/9 w-full bg-slate-300 rounded-xl border object-cover\"><h2 class=\"text-xl text-slate-900 font-semibold\">Cara Hosting Web dengan Github Page</h2><p class=\"text-sm text-slate-500\">Hosting Web Statis Gratis menggunakan Github Page</p></a></article>"
+}
