@@ -89,7 +89,7 @@ useContentHead(doc as Ref<ParsedContent>);
     </div>
 
     <ContentRenderer :value="doc!"
-      class="prose prose-slate text-base lg:text-lg min-h-50vh flex flex-col [&_img]:bg-slate-100 checked:[&_input]:(text-green)"
+      class="prose prose-slate text-base lg:text-lg min-h-50vh flex flex-col [&_img]:bg-slate-100 checked:[&_input]:(text-green size-1.25em)"
       @vue:beforeUnmount="onContentBeforeUnmount">
       <template #empty>
         <i>No details content provided.</i>

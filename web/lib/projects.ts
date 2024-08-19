@@ -95,6 +95,12 @@ export const TECHNOLOGIES = {
     description: 'Contentful is a content platform to create, manage and distribute content to any platform.',
     url: 'https://www.contentful.com/',
   },
+  kotlin: {
+    title: 'Kotlin',
+    icon: 'https://kotlinlang.org/assets/images/favicon.svg?v2',
+    description: 'It\'s concise, safe, interoperable with Java and other languages, and provides many ways to reuse code between multiple platforms for productive programming.',
+    url: 'https://kotlinlang.org/'
+  },
 };
 
 export const TECHNOLOGY_NAMES = Object.keys(TECHNOLOGIES) as (keyof typeof TECHNOLOGIES)[];
