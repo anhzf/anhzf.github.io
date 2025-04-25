@@ -15,7 +15,7 @@ useHead({
 <template>
   <main class="flex flex-col gap-4 m-2 md:m-8 lg:mx-32 lg:my-16">
     <ContentDoc v-slot="{ doc }">
-      <div class="w-full max-w-prose prose prose-slate text-xl bg-white py-4 shadow">
+      <div data-scroll-section class="w-full max-w-prose prose prose-slate text-xl bg-white py-4 shadow">
         <!-- Breadcrumbs -->
         <div
           class="text-base flex items-center flex-wrap gap-x-2 mb-8 px-4 md:px-8 [&>a]:(text-sm text-slate-300 no-underline) [&>a:hover]:(underline)">

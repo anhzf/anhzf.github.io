@@ -14,6 +14,10 @@ export default defineNuxtPlugin(async ({ hook, _route }) => {
     suspenseFinished.then(() => {
       scrollFx ??= initializeScroll();
 
+      if (import.meta.dev) {
+        (window as any).scrollFx = scrollFx;
+      }
+
       scrollFx.update();
       scrollFx.scrollTo(_route.hash || 0);
     });
