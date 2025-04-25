@@ -62,7 +62,7 @@ router.afterEach(async () => {
           </li>
 
           <li class="flex">
-            <NuxtLink :to="{ name: 'links' }" class="menu-item">
+            <NuxtLink :to="{ name: 'links', hash: '#main' }" class="menu-item">
               <div class="i-eva:link-2-outline menu-item__icon" />
               <span>Links</span>
             </NuxtLink>
