@@ -1,7 +1,7 @@
 export const TECHNOLOGIES = {
   nextjs: {
     title: 'Next.js',
-    icon: 'https://nextjs.org/static/favicon/favicon-32x32.png',
+    icon: 'https://nextjs.org/favicon.ico',
     description: 'The React Framework for Production',
     url: 'https://nextjs.org/',
   },
@@ -31,7 +31,7 @@ export const TECHNOLOGIES = {
   },
   firebase: {
     title: 'Firebase',
-    icon: 'https://www.gstatic.com/devrel-devsite/prod/vc5df62aff689c916c31b2ac1e49a7e8c5ecada1bb13dcdd68aaefb1e1e9b9ec0/firebase/images/favicon.png',
+    icon: '/assets/icons/firebase.svg',
     description: 'Firebase is a platform developed by Google for creating mobile and web applications',
     url: 'https://firebase.google.com/',
   },
